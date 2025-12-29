@@ -36,13 +36,6 @@ export default function RootLayout({
             {children}
           </div>
         </ThemeProvider>
-
-        <style jsx global>{`
-          .app-container {
-            margin-top: 60px;
-            min-height: calc(100vh - 60px);
-          }
-        `}</style>
       </body>
     </html>
   );
