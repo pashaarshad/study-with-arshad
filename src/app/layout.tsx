@@ -1,23 +1,26 @@
+// src/app/layout.tsx
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
+import { ThemeProvider } from "@/context/ThemeContext";
 import Header from "@/components/Header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: 'swap',
+  variable: '--font-inter'
 });
 
 export const metadata: Metadata = {
-  title: "Study with Arshad - Learn AI, Programming & More",
-  description: "A comprehensive educational platform for students to learn Artificial Intelligence, Programming, and other technical subjects with clear explanations and real-world examples.",
-  keywords: ["AI", "Artificial Intelligence", "Machine Learning", "Programming", "Education", "Learning"],
+  title: "Study with Arshad | Learn AI & Programming",
+  description: "A comprehensive educational platform for learning Artificial Intelligence, Machine Learning, and Programming. Free tutorials and courses for students.",
+  keywords: ["AI", "Artificial Intelligence", "Machine Learning", "Programming", "Education", "Tutorials"],
+  authors: [{ name: "Arshad" }],
+  openGraph: {
+    title: "Study with Arshad | Learn AI & Programming",
+    description: "A comprehensive educational platform for learning Artificial Intelligence, Machine Learning, and Programming.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -27,14 +30,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable}`}
-      >
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </head>
+      <body className={inter.className}>
         <ThemeProvider>
           <Header />
-          <div className="app-container">
-            {children}
-          </div>
+          <main>{children}</main>
         </ThemeProvider>
       </body>
     </html>

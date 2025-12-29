@@ -1,6 +1,6 @@
 'use client';
-
-import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+// src/context/ThemeContext.tsx
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 type Theme = 'light' | 'dark';
 
@@ -12,16 +12,18 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-    const [theme, setTheme] = useState<Theme>('dark');
+    const [theme, setTheme] = useState<Theme>('light');
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
         setMounted(true);
+        // Check for saved theme preference or system preference
         const savedTheme = localStorage.getItem('theme') as Theme;
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
         if (savedTheme) {
             setTheme(savedTheme);
-        } else {
-            // Default to dark theme
+        } else if (systemPrefersDark) {
             setTheme('dark');
         }
     }, []);
@@ -34,14 +36,17 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     }, [theme, mounted]);
 
     const toggleTheme = () => {
-        setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+        setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
     };
+
+    // Prevent flash of wrong theme
+    if (!mounted) {
+        return null;
+    }
 
     return (
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
-            <div style={{ visibility: mounted ? 'visible' : 'hidden' }}>
-                {children}
-            </div>
+            {children}
         </ThemeContext.Provider>
     );
 }

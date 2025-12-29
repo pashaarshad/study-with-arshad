@@ -1,0 +1,163 @@
+/* src/components/MobileSidebar.module.css */
+
+.toggleBtn {
+    display: none;
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    z-index: 50;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--link-color);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-lg);
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.toggleBtn:hover {
+    transform: scale(1.05);
+}
+
+.toggleBtn:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 1023px) {
+    .toggleBtn {
+        display: flex;
+    }
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlayOpen {
+    display: block;
+    opacity: 1;
+}
+
+.sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    width: 320px;
+    max-width: 85vw;
+    background-color: var(--bg-primary);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+}
+
+@media (max-width: 1023px) {
+    .sidebar {
+        display: block;
+    }
+}
+
+.sidebarOpen {
+    transform: translateX(0);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--bg-secondary);
+}
+
+.subjectInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.subjectIcon {
+    font-size: 1.5rem;
+}
+
+.subjectTitle {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-heading);
+}
+
+.closeBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.closeBtn:hover {
+    background-color: var(--bg-hover);
+}
+
+.nav {
+    padding: 1rem;
+}
+
+.unit {
+    margin-bottom: 1rem;
+}
+
+.unitTitle {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 0.75rem;
+}
+
+.topicList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.topicLink {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.topicLink:hover {
+    background-color: var(--bg-hover);
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.topicActive {
+    background-color: var(--bg-tertiary);
+    color: var(--link-color);
+    font-weight: 500;
+}
