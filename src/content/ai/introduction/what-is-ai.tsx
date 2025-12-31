@@ -141,8 +141,7 @@ export default function WhatIsAI() {
                     reliably tell the machine from the human, the machine is said to have passed the test.
                 </p>
                 <p>
-                    Modern AI systems like <strong>ChatGPT</strong>, <strong>Claude</strong>, and <strong>Gemini</strong>
-                    can often pass versions of the Turing Test, showing how far we've come since Turing's vision!
+                    Modern AI systems like <strong>ChatGPT</strong>, <strong>Claude</strong>, and <strong>Gemini</strong> can often pass versions of the Turing Test, showing how far we've come since Turing's vision!
                 </p>
             </InfoBox>
 
