@@ -82,7 +82,22 @@ export function CodeBlock({ code, language = 'python', title }: CodeBlockProps) 
 
     const handleCopy = async () => {
         try {
-            await navigator.clipboard.writeText(code);
+            // Check if clipboard API is available
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                await navigator.clipboard.writeText(code);
+            } else {
+                // Fallback for older browsers or non-HTTPS
+                const textArea = document.createElement('textarea');
+                textArea.value = code;
+                textArea.style.position = 'fixed';
+                textArea.style.left = '-999999px';
+                textArea.style.top = '-999999px';
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+            }
             setIsCopied(true);
             setTimeout(() => setIsCopied(false), 2000);
         } catch (err) {
