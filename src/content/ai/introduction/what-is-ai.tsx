@@ -1,6 +1,6 @@
 // src/content/ai/introduction/what-is-ai.tsx
 import React from 'react';
-import { KeyPoints, InfoBox, ExampleBox, CodeBlock, ImagePlaceholder } from '@/components/ContentDisplay';
+import { KeyPoints, InfoBox, ExampleBox, CodeBlock, ImagePlaceholder, ContentImage } from '@/components/ContentDisplay';
 
 export default function WhatIsAI() {
     return (
@@ -52,10 +52,10 @@ export default function WhatIsAI() {
                 <li><strong>Problem-solving</strong> — finding solutions to complex problems</li>
             </ul>
 
-            <ImagePlaceholder
-                name="ai-definition-diagram"
-                description="A diagram showing the relationship between AI, Machine Learning, and Deep Learning as nested circles"
-                suggestedSize="800x450"
+            <ContentImage
+                src="/imgs/whatisAI.png"
+                alt="Diagram showing the relationship between AI, Machine Learning, and Deep Learning"
+                caption="The relationship between AI, Machine Learning, and Deep Learning - AI encompasses ML, which encompasses Deep Learning"
             />
 
             <h2 id="ai-vs-ml-vs-dl">AI vs Machine Learning vs Deep Learning</h2>

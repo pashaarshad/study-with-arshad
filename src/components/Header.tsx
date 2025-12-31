@@ -2,6 +2,7 @@
 // src/components/Header.tsx
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { subjects } from '@/data/subjects';
 import ThemeToggle from './ThemeToggle';
@@ -20,7 +21,14 @@ export default function Header() {
             <div className={styles.container}>
                 {/* Logo */}
                 <Link href="/" className={styles.logo}>
-                    <span className={styles.logoIcon}>📚</span>
+                    <Image
+                        src="/imgs/Study-with-arshad.png"
+                        alt="Study with Arshad"
+                        width={40}
+                        height={40}
+                        className={styles.logoImage}
+                        priority
+                    />
                     <span className={styles.logoText}>
                         Study with <span className={styles.logoHighlight}>Arshad</span>
                     </span>
