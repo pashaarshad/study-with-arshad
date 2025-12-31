@@ -17,6 +17,7 @@ export default function WhatIsAI() {
                 title="What You'll Learn"
                 points={[
                     "Definition and core concepts of Artificial Intelligence",
+                    "Alan Turing - The Father of AI and The Imitation Game",
                     "Difference between AI, Machine Learning, and Deep Learning",
                     "Types of AI: Narrow AI vs General AI",
                     "Real-world applications of AI in everyday life",
@@ -58,7 +59,98 @@ export default function WhatIsAI() {
                 caption="The relationship between AI, Machine Learning, and Deep Learning - AI encompasses ML, which encompasses Deep Learning"
             />
 
+            {/* Alan Turing - Father of AI Section */}
+            <h2 id="alan-turing">Alan Turing: The Father of Artificial Intelligence</h2>
+
+            <p>
+                No discussion about AI is complete without mentioning <strong>Alan Turing</strong> (1912-1954),
+                the brilliant British mathematician and computer scientist who is widely considered the
+                <strong> father of theoretical computer science and artificial intelligence</strong>.
+            </p>
+
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center', margin: '1.5rem 0' }}>
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuclIC5KBKORZqSs4qANd3yVUbNOj3yPrfiA&s"
+                    alt="Alan Turing - Pioneer of Computer Science and AI"
+                    style={{ maxWidth: '200px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.2)' }}
+                />
+            </div>
+
+            <h3>Turing's Key Contributions to AI</h3>
+
+            <ul>
+                <li>
+                    <strong>The Turing Machine (1936):</strong> A theoretical model that laid the foundation
+                    for modern computers. It could simulate any algorithm and is still used today to define
+                    what is computable.
+                </li>
+                <li>
+                    <strong>Breaking the Enigma Code (WWII):</strong> During World War II, Turing worked at
+                    Bletchley Park where he designed the <strong>Bombe machine</strong> that helped crack the
+                    Nazi Enigma code. This is estimated to have shortened the war by 2-4 years and saved
+                    millions of lives.
+                </li>
+                <li>
+                    <strong>The Turing Test (1950):</strong> In his famous paper "Computing Machinery and Intelligence,"
+                    Turing proposed a test to determine if a machine can exhibit intelligent behavior indistinguishable
+                    from a human. This test is still used as a benchmark in AI today!
+                </li>
+            </ul>
+
+            <blockquote>
+                "A computer would deserve to be called intelligent if it could deceive a human into believing
+                that it was human."
+                <br /><br />
+                — Alan Turing, 1950
+            </blockquote>
+
+            <ExampleBox title="🎬 Movie Recommendation: The Imitation Game (2014)">
+                <p>
+                    To truly understand Alan Turing's incredible story and his contributions to AI and computing,
+                    we highly recommend watching <strong>"The Imitation Game"</strong> (2014), starring
+                    <strong> Benedict Cumberbatch</strong> as Alan Turing.
+                </p>
+
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center', margin: '1rem 0' }}>
+                    <img
+                        src="https://www.indiewire.com/wp-content/uploads/2014/12/the-imitation-game-1.jpg"
+                        alt="The Imitation Game movie scene - Alan Turing and team at Bletchley Park"
+                        style={{ maxWidth: '100%', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.2)' }}
+                    />
+                </div>
+
+                <p>
+                    <strong>The movie shows:</strong>
+                </p>
+                <ul>
+                    <li>How Turing built a machine to break the "unbreakable" Enigma code</li>
+                    <li>The birth of computational thinking and early AI concepts</li>
+                    <li>The challenges of creating a machine that can "think"</li>
+                    <li>How Turing's work laid the foundation for modern computers and AI</li>
+                </ul>
+
+                <p style={{ marginTop: '1rem' }}>
+                    <strong>📺 Reference:</strong>{' '}
+                    <a href="https://physicsworld.com/a/benedict-cumberbatch-the-imitation-game/" target="_blank" rel="noopener noreferrer">
+                        Read more about the movie and its scientific accuracy
+                    </a>
+                </p>
+            </ExampleBox>
+
+            <InfoBox type="highlight" title="The Turing Test - Still Relevant Today!">
+                <p>
+                    The <strong>Turing Test</strong> works like this: A human evaluator has text conversations
+                    with both a human and a machine (without knowing which is which). If the evaluator cannot
+                    reliably tell the machine from the human, the machine is said to have passed the test.
+                </p>
+                <p>
+                    Modern AI systems like <strong>ChatGPT</strong>, <strong>Claude</strong>, and <strong>Gemini</strong>
+                    can often pass versions of the Turing Test, showing how far we've come since Turing's vision!
+                </p>
+            </InfoBox>
+
             <h2 id="ai-vs-ml-vs-dl">AI vs Machine Learning vs Deep Learning</h2>
+
 
             <p>
                 Many people use these terms interchangeably, but they have distinct meanings:
@@ -139,10 +231,10 @@ export default function WhatIsAI() {
                 science fiction and theoretical future AI.
             </p>
 
-            <ImagePlaceholder
-                name="ai-types-comparison"
-                description="An infographic comparing Narrow AI, General AI, and Super AI with their characteristics"
-                suggestedSize="800x500"
+            <ContentImage
+                src="/imgs/ai-types-comparison.png"
+                alt="An infographic comparing Narrow AI, General AI, and Super AI with their characteristics"
+                caption="Comparison of AI Types: Narrow AI (exists today), General AI (future goal), and Super AI (theoretical)"
             />
 
             <h3>Based on Functionalities</h3>
