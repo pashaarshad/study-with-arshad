@@ -1,3 +1,4 @@
+'use client';
 // src/components/ContentDisplay.tsx
 import React from 'react';
 import styles from './ContentDisplay.module.css';
@@ -68,7 +69,7 @@ export function ExampleBox({ title, children }: ExampleBoxProps) {
     );
 }
 
-// Code Block Component
+// Code Block Component with Collapse/Expand and Copy functionality
 interface CodeBlockProps {
     code: string;
     language?: string;
@@ -76,15 +77,60 @@ interface CodeBlockProps {
 }
 
 export function CodeBlock({ code, language = 'python', title }: CodeBlockProps) {
+    const [isExpanded, setIsExpanded] = React.useState(false);
+    const [isCopied, setIsCopied] = React.useState(false);
+
+    const handleCopy = async () => {
+        try {
+            await navigator.clipboard.writeText(code);
+            setIsCopied(true);
+            setTimeout(() => setIsCopied(false), 2000);
+        } catch (err) {
+            console.error('Failed to copy:', err);
+        }
+    };
+
+    const toggleExpand = () => {
+        setIsExpanded(!isExpanded);
+    };
+
     return (
         <div className={styles.codeContainer}>
-            {title && <div className={styles.codeTitle}>{title}</div>}
-            <pre className={styles.codeBlock}>
-                <code className={language}>{code}</code>
-            </pre>
+            <div className={styles.codeHeader} onClick={toggleExpand}>
+                <div className={styles.codeHeaderLeft}>
+                    <span className={styles.codeIcon}>{isExpanded ? '▼' : '▶'}</span>
+                    <span className={styles.codeLabel}>💻 Example Program</span>
+                    {title && <span className={styles.codeTitle}>— {title}</span>}
+                </div>
+                <div className={styles.codeHeaderRight}>
+                    <span className={styles.expandHint}>
+                        {isExpanded ? 'Click to collapse' : 'Click to expand'}
+                    </span>
+                </div>
+            </div>
+
+            {isExpanded && (
+                <div className={styles.codeContent}>
+                    <button
+                        className={styles.copyButton}
+                        onClick={(e) => { e.stopPropagation(); handleCopy(); }}
+                        title="Copy to clipboard"
+                    >
+                        {isCopied ? (
+                            <>✓ Copied!</>
+                        ) : (
+                            <>📋 Copy</>
+                        )}
+                    </button>
+                    <pre className={styles.codeBlock}>
+                        <code className={language}>{code}</code>
+                    </pre>
+                </div>
+            )}
         </div>
     );
 }
+
 
 // Image Placeholder Component
 interface ImagePlaceholderProps {

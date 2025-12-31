@@ -87,7 +87,7 @@ export default async function TopicPage({ params }: PageProps) {
             <TopicHeader
                 title={topic.title}
                 readTime="10-15 min"
-                lastUpdated="December 2024"
+                lastUpdated="31 December 2025"
             />
 
             {ContentComponent ? (
