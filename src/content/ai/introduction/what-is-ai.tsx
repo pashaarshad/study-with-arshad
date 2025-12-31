@@ -34,7 +34,7 @@ export default function WhatIsAI() {
                 It is related to the similar task of using computers to understand human intelligence, but AI does
                 not have to confine itself to methods that are biologically observable."
                 <br /><br />
-                — John McCarthy, 1956
+                — John McCarthy, Father of AI, 1956
             </blockquote>
 
             <p>
@@ -56,8 +56,8 @@ export default function WhatIsAI() {
                 caption="The relationship between AI, Machine Learning, and Deep Learning - AI encompasses ML, which encompasses Deep Learning"
             />
 
-            {/* Alan Turing - Father of AI Section */}
-            <h2 id="alan-turing">Alan Turing: The Father of Artificial Intelligence</h2>
+            {/* Alan Turing - Theoretical Father of AI Section */}
+            <h2 id="alan-turing">Alan Turing: The Theoretical Father of Artificial Intelligence</h2>
 
             <p>
                 No discussion about AI is complete without mentioning <strong>Alan Turing</strong> (1912-1954),
