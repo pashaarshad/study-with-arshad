@@ -22,7 +22,7 @@ export default function Header() {
                 {/* Logo */}
                 <Link href="/" className={styles.logo}>
                     <Image
-                        src="/imgs/Study-with-arshad.png"
+                        src="/imgs/logo12.png"
                         alt="Study with Arshad"
                         width={40}
                         height={40}

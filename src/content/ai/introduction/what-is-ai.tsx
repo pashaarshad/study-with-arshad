@@ -6,11 +6,8 @@ export default function WhatIsAI() {
     return (
         <div>
             <p>
-                <strong>Artificial Intelligence (AI)</strong> is one of the most transformative technologies of our time.
-                At its core, AI refers to the simulation of human intelligence processes by computer systems.
-                These processes include <em>learning</em> (acquiring information and rules for using it),
-                <em>reasoning</em> (using rules to reach approximate or definite conclusions), and
-                <em>self-correction</em>.
+                <strong>Artificial Intelligence (AI)</strong> is teaching computers to mimic human intelligence,
+                enabling them to learn, reason, solve problems, understand language, and make decisions.
             </p>
 
             <KeyPoints
