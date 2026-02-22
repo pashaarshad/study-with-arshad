@@ -280,15 +280,15 @@ export const subjects: Subject[] = [
         title: 'PHP Programming',
         slug: 'php',
         description: 'Master PHP for server-side web development, MySQL integration, and dynamic websites',
-        icon: '�',
+        icon: '🐘',
         units: []
     },
     {
         id: 'wc',
-        title: 'Wireless Communication',
+        title: 'Web Content Management System',
         slug: 'wc',
-        description: 'Study wireless networks, mobile communication, and signal processing fundamentals',
-        icon: '�',
+        description: 'Learn web content management, CMS platforms, and digital content strategies',
+        icon: '🌐',
         units: []
     }
 ];
