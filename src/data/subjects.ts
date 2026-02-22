@@ -273,7 +273,21 @@ export const subjects: Subject[] = [
         slug: 'fds',
         description: 'Learn data analysis, statistics, visualization, and machine learning fundamentals for data-driven decision making',
         icon: '📊',
-        units: []
+        units: [
+            {
+                id: 'fds-ia-prep',
+                title: 'IA Preparation',
+                slug: 'ia-prep',
+                topics: [
+                    {
+                        id: 'important-questions',
+                        title: 'Important IA Questions (40 Marks)',
+                        slug: 'important-questions',
+                        description: 'Key questions and answers for Internal Assessment'
+                    }
+                ]
+            }
+        ]
     },
     {
         id: 'php',

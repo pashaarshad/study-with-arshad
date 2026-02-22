@@ -10,6 +10,9 @@ import IntelligentAgents from './ai/introduction/intelligent-agents';
 import AgentEnvironments from './ai/introduction/agent-environments';
 import TypesOfAgents from './ai/introduction/types-of-agents';
 
+// Content imports for FDS - IA Prep
+import FDSImportantQuestions from './fds/ia-prep/important-questions';
+
 // Content registry
 const contentRegistry: Record<string, Record<string, Record<string, React.ComponentType>>> = {
     ai: {
@@ -22,7 +25,11 @@ const contentRegistry: Record<string, Record<string, Record<string, React.Compon
             'agent-environments': AgentEnvironments,
             'types-of-agents': TypesOfAgents,
         },
-        // Other units will be added here
+    },
+    fds: {
+        'ia-prep': {
+            'important-questions': FDSImportantQuestions,
+        },
     },
 };
 
