@@ -1,6 +1,6 @@
 // src/content/ai/introduction/history-of-ai.tsx
 import React from 'react';
-import { KeyPoints, InfoBox, ExampleBox, CodeBlock, ImagePlaceholder } from '@/components/ContentDisplay';
+import { KeyPoints, InfoBox, ExampleBox, CodeBlock, ContentImage } from '@/components/ContentDisplay';
 
 export default function HistoryOfAI() {
     return (
@@ -76,10 +76,10 @@ export default function HistoryOfAI() {
                 </p>
             </InfoBox>
 
-            <ImagePlaceholder
-                name="early-automata-timeline"
-                description="A timeline showing early automata from ancient Greece to the 1800s with illustrations"
-                suggestedSize="900x400"
+            <ContentImage
+                src="/imgs/early-automata-timeline.svg"
+                alt="A timeline showing early automata from ancient Greece to the 1800s with illustrations"
+                caption="Timeline of Early Automata and Mechanical Devices"
             />
 
             <h2 id="theoretical-foundations">Theoretical Foundations (1900-1950)</h2>
@@ -171,10 +171,10 @@ export default function HistoryOfAI() {
                 <li><strong>Claude Shannon</strong> — Father of information theory</li>
             </ul>
 
-            <ImagePlaceholder
-                name="dartmouth-conference-1956"
-                description="Historic photo or illustration of the Dartmouth Conference attendees in 1956"
-                suggestedSize="800x450"
+            <ContentImage
+                src="/imgs/dartmouth-conference-1956.svg"
+                alt="Historic photo or illustration of the Dartmouth Conference attendees in 1956"
+                caption="The Dartmouth Summer Research Project on Artificial Intelligence (1956)"
             />
 
             <h2 id="golden-years">The Golden Years (1956-1974)</h2>
@@ -237,12 +237,12 @@ export default function HistoryOfAI() {
                 </p>
                 <pre>
                     <code>{`User: Men are all alike.
-ELIZA: In what way?
-User: They're always bugging us about something.
-ELIZA: Can you think of a specific example?
-User: Well, my boyfriend made me come here.
-ELIZA: Your boyfriend made you come here?
-User: He says I'm depressed much of the time.
+    ELIZA: In what way ?
+        User : They're always bugging us about something.
+ELIZA: Can you think of a specific example ?
+    User : Well, my boyfriend made me come here.
+        ELIZA: Your boyfriend made you come here ?
+            User : He says I'm depressed much of the time.
 ELIZA: I am sorry to hear you are depressed.`}</code>
                 </pre>
                 <p>
@@ -502,10 +502,10 @@ ELIZA: I am sorry to hear you are depressed.`}</code>
                 </tbody>
             </table>
 
-            <ImagePlaceholder
-                name="ai-history-timeline"
-                description="A comprehensive timeline showing all major AI milestones from 1950 to 2024"
-                suggestedSize="1000x500"
+            <ContentImage
+                src="/imgs/ai-history-timeline.svg"
+                alt="A comprehensive timeline showing all major AI milestones from 1950 to 2024"
+                caption="Major Milestones in the History of Artificial Intelligence"
             />
 
             <InfoBox type="highlight" title="AlphaGo — A Defining Moment">

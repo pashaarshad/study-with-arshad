@@ -1,6 +1,6 @@
 // src/content/ai/introduction/intelligent-agents.tsx
 import React from 'react';
-import { KeyPoints, InfoBox, ExampleBox, CodeBlock, ImagePlaceholder } from '@/components/ContentDisplay';
+import { KeyPoints, InfoBox, ExampleBox, CodeBlock, ContentImage } from '@/components/ContentDisplay';
 
 export default function IntelligentAgents() {
     return (
@@ -71,10 +71,10 @@ export default function IntelligentAgents() {
                 </tbody>
             </table>
 
-            <ImagePlaceholder
-                name="agent-environment-diagram"
-                description="Diagram showing an agent with sensors receiving percepts from the environment and actuators producing actions that affect the environment"
-                suggestedSize="800x450"
+            <ContentImage
+                src="/imgs/agent-environment-diagram.svg"
+                alt="Diagram showing an agent with sensors receiving percepts from the environment and actuators producing actions that affect the environment"
+                caption="Interaction between an Agent and its Environment"
             />
 
             <h2 id="perception-action-cycle">The Perception-Action Cycle</h2>
@@ -94,59 +94,59 @@ export default function IntelligentAgents() {
                 <CodeBlock
                     language="python"
                     title="vacuum_agent_cycle.py"
-                    code={`# Simple Vacuum Cleaner Agent - Perception-Action Cycle
+                    code={`# Simple Vacuum Cleaner Agent - Perception - Action Cycle
 
 class VacuumAgent:
     def __init__(self):
-        self.location = 'A'  # Starting location
+self.location = 'A'  # Starting location
         
     def sense(self, environment):
-        """
-        SENSE: Perceive the current state
-        Returns: current location and whether it's dirty
-        """
-        current_location = self.location
-        is_dirty = environment[current_location]
-        return (current_location, is_dirty)
+"""
+SENSE: Perceive the current state
+Returns: current location and whether it's dirty
+"""
+current_location = self.location
+is_dirty = environment[current_location]
+return (current_location, is_dirty)
     
     def think(self, percept):
-        """
-        THINK: Decide what action to take based on percept
-        Simple rule-based logic
-        """
-        location, is_dirty = percept
-        
-        if is_dirty:
-            return 'SUCK'  # Clean if dirty
+"""
+THINK: Decide what action to take based on percept
+        Simple rule - based logic
+"""
+location, is_dirty = percept
+
+if is_dirty:
+    return 'SUCK'  # Clean if dirty
         elif location == 'A':
-            return 'MOVE_RIGHT'  # Move to B if at A
+return 'MOVE_RIGHT'  # Move to B if at A
         elif location == 'B':
-            return 'MOVE_LEFT'  # Move to A if at B
+return 'MOVE_LEFT'  # Move to A if at B
     
     def act(self, action, environment):
-        """
-        ACT: Execute the chosen action
+"""
+ACT: Execute the chosen action
         Modifies the environment or agent state
-        """
-        if action == 'SUCK':
-            environment[self.location] = False  # Clean the spot
-            print(f"Cleaned location {self.location}")
+"""
+if action == 'SUCK':
+    environment[self.location] = False  # Clean the spot
+print(f"Cleaned location {self.location}")
         elif action == 'MOVE_RIGHT':
-            self.location = 'B'
-            print("Moved to location B")
+self.location = 'B'
+print("Moved to location B")
         elif action == 'MOVE_LEFT':
-            self.location = 'A'
-            print("Moved to location A")
+self.location = 'A'
+print("Moved to location A")
     
     def run_cycle(self, environment):
-        """Complete one perception-action cycle"""
-        percept = self.sense(environment)
-        action = self.think(percept)
-        self.act(action, environment)
-        return action
+"""Complete one perception-action cycle"""
+percept = self.sense(environment)
+action = self.think(percept)
+self.act(action, environment)
+return action
 
 # Simulation
-environment = {'A': True, 'B': True}  # Both locations are dirty
+environment = { 'A': True, 'B': True }  # Both locations are dirty
 agent = VacuumAgent()
 
 print("Initial environment:", environment)
@@ -154,12 +154,12 @@ print("-" * 40)
 
 for step in range(4):
     print(f"Step {step + 1}:")
-    agent.run_cycle(environment)
-    print(f"Environment now: {environment}")
-    print()
+agent.run_cycle(environment)
+print(f"Environment now: {environment}")
+print()
 
 # Output:
-# Initial environment: {'A': True, 'B': True}
+# Initial environment: { 'A': True, 'B': True }
 # Step 1: Cleaned location A
 # Step 2: Moved to location B
 # Step 3: Cleaned location B
@@ -222,11 +222,11 @@ for step in range(4):
                 sequence to an action:
             </p>
 
-            <pre><code>{`f: P* → A
+            <pre><code>{`f: P * → A
 
 Where:
-  P* = all possible percept sequences
-  A  = set of possible actions`}</code></pre>
+P * = all possible percept sequences
+A = set of possible actions`}</code></pre>
 
             <p>
                 The agent function captures everything about how an agent behaves. An AI designer's job
@@ -240,33 +240,33 @@ Where:
                 <CodeBlock
                     language="python"
                     title="agent_function.py"
-                    code={`# Agent Function (conceptual - this table would be infinite!)
+                    code={`# Agent Function(conceptual - this table would be infinite!)
 agent_function_table = {
     # Percept sequence → Action
-    ('A', 'Clean'): 'Right',
+        ('A', 'Clean'): 'Right',
     ('A', 'Dirty'): 'Suck',
     ('B', 'Clean'): 'Left',
-    ('B', 'Dirty'): 'Suck',
-    (('A', 'Clean'), ('A', 'Clean')): 'Right',  # History matters!
+        ('B', 'Dirty'): 'Suck',
+            (('A', 'Clean'), ('A', 'Clean')): 'Right',  # History matters!
     # ... infinite more entries
 }
 
-# Agent Program (practical implementation)
+# Agent Program(practical implementation)
 def simple_reflex_agent(percept):
-    """
+"""
     A simple agent program that implements the agent function.
     Uses rules instead of a lookup table.
     """
-    location, status = percept
-    if status == 'Dirty':
-        return 'Suck'
+location, status = percept
+if status == 'Dirty':
+    return 'Suck'
     elif location == 'A':
-        return 'Right'
+return 'Right'
     else:
-        return 'Left'
+return 'Left'
 
 # The agent program is a compact way to represent
-# the (potentially infinite) agent function!`}
+# the(potentially infinite) agent function!`}
                 />
             </ExampleBox>
 
@@ -468,10 +468,10 @@ def simple_reflex_agent(percept):
                 </tbody>
             </table>
 
-            <ImagePlaceholder
-                name="peas-framework-diagram"
-                description="Visual diagram of PEAS framework showing the four components and their relationships"
-                suggestedSize="800x450"
+            <ContentImage
+                src="/imgs/peas-framework-diagram.svg"
+                alt="Visual diagram of PEAS framework showing the four components and their relationships"
+                caption="The PEAS Framework (Performance, Environment, Actuators, Sensors)"
             />
 
             <h2 id="agent-structure">Structure of Agents</h2>
@@ -483,8 +483,8 @@ def simple_reflex_agent(percept):
             <pre><code>{`Agent = Architecture + Program
 
 Where:
-  Architecture = the physical or virtual platform (hardware/software)
-  Program = the logic that implements the agent function`}</code></pre>
+Architecture = the physical or virtual platform(hardware / software)
+Program = the logic that implements the agent function`}</code></pre>
 
             <ExampleBox title="Agent Structure Example">
                 <CodeBlock
@@ -493,78 +493,78 @@ Where:
                     code={`# Generic Agent Structure
 
 class Agent:
-    """
+"""
     Base class representing an intelligent agent.
-    Combines architecture (platform) and program (logic).
+    Combines architecture(platform) and program(logic).
     """
     
     def __init__(self, sensors, actuators):
-        """
-        ARCHITECTURE: What the agent can perceive and do
-        """
+"""
+ARCHITECTURE: What the agent can perceive and do
+    """
         self.sensors = sensors
-        self.actuators = actuators
-        self.internal_state = {}  # Memory (for some agent types)
+self.actuators = actuators
+self.internal_state = {}  # Memory(for some agent types)
     
     def perceive(self, environment):
-        """
+"""
         Use sensors to get percept from environment
-        """
-        percept = {}
-        for sensor in self.sensors:
-            percept[sensor] = environment.get_reading(sensor)
-        return percept
+"""
+percept = {}
+for sensor in self.sensors:
+    percept[sensor] = environment.get_reading(sensor)
+return percept
     
     def decide(self, percept):
-        """
-        PROGRAM: The agent's decision-making logic
+"""
+PROGRAM: The agent's decision-making logic
         This is where the AI magic happens!
         Override this in specific agent implementations.
         """
         raise NotImplementedError("Subclass must implement decide()")
     
     def act(self, action, environment):
-        """
+"""
         Use actuators to perform action in environment
-        """
-        for actuator, value in action.items():
-            if actuator in self.actuators:
-                environment.apply_action(actuator, value)
+"""
+for actuator, value in action.items():
+    if actuator in self.actuators:
+        environment.apply_action(actuator, value)
     
     def run_step(self, environment):
-        """
+"""
         One step of the agent's lifecycle
-        """
-        percept = self.perceive(environment)
-        action = self.decide(percept)
-        self.act(action, environment)
-        return action
+"""
+percept = self.perceive(environment)
+action = self.decide(percept)
+self.act(action, environment)
+return action
 
 
 # Specific implementation: Simple Thermostat Agent
 class ThermostatAgent(Agent):
-    def __init__(self, target_temp=22):
-        super().__init__(
-            sensors=['temperature'],
-            actuators=['heater', 'cooler']
-        )
-        self.target_temp = target_temp
+    def __init__(self, target_temp = 22):
+super().__init__(
+    sensors = ['temperature'],
+    actuators = ['heater', 'cooler']
+)
+self.target_temp = target_temp
     
     def decide(self, percept):
-        """
-        Simple rule-based decision making
-        """
-        current_temp = percept['temperature']
-        
-        if current_temp < self.target_temp - 1:
-            return {'heater': 'ON', 'cooler': 'OFF'}
+"""
+        Simple rule - based decision making
+"""
+current_temp = percept['temperature']
+
+if current_temp < self.target_temp - 1:
+    return { 'heater': 'ON', 'cooler': 'OFF' }
         elif current_temp > self.target_temp + 1:
-            return {'heater': 'OFF', 'cooler': 'ON'}
+return { 'heater': 'OFF', 'cooler': 'ON' }
         else:
-            return {'heater': 'OFF', 'cooler': 'OFF'}
+return { 'heater': 'OFF', 'cooler': 'OFF' }
 
 # Usage
-thermostat = ThermostatAgent(target_temp=22)
+thermostat = ThermostatAgent(target_temp = 22)
 # thermostat.run_step(room_environment)`}
                 />
             </ExampleBox>
