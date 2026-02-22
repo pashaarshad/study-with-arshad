@@ -1,6 +1,6 @@
 // src/content/ai/introduction/foundations-of-ai.tsx
 import React from 'react';
-import { KeyPoints, InfoBox, ExampleBox, CodeBlock, ImagePlaceholder } from '@/components/ContentDisplay';
+import { KeyPoints, InfoBox, ExampleBox, CodeBlock, ImagePlaceholder, ContentImage } from '@/components/ContentDisplay';
 
 export default function FoundationsOfAI() {
     return (
@@ -181,10 +181,10 @@ print(f"Probability of having disease given positive test: {p_disease_given_posi
                 <li><strong>Andrey Kolmogorov (1903-1987)</strong> — Probability theory axioms</li>
             </ul>
 
-            <ImagePlaceholder
-                name="math-foundations-diagram"
-                description="A diagram showing how different mathematical fields connect to various AI applications"
-                suggestedSize="800x500"
+            <ContentImage
+                src="/imgs/math-foundations-diagram.png"
+                alt="A diagram showing how different mathematical fields connect to various AI applications"
+                caption="Mathematical Foundations of Artificial Intelligence"
             />
 
             <h2 id="neuroscience">3. Neuroscience</h2>
@@ -397,10 +397,10 @@ print("This is the foundation of reinforcement learning.")`}
                 </tbody>
             </table>
 
-            <ImagePlaceholder
-                name="turing-machine-diagram"
-                description="A simplified diagram of a Turing Machine showing tape, head, and state transitions"
-                suggestedSize="800x400"
+            <ContentImage
+                src="/imgs/turing-machine-diagram.png"
+                alt="A simplified diagram of a Turing Machine showing tape, head, and state transitions"
+                caption="Conceptual Diagram of a Turing Machine"
             />
 
             <h2 id="economics">6. Economics</h2>
@@ -466,10 +466,10 @@ print("This is the foundation of reinforcement learning.")`}
                 ]}
             />
 
-            <ImagePlaceholder
-                name="ai-foundations-overview"
-                description="A comprehensive diagram showing all disciplines contributing to AI with connecting lines to show relationships"
-                suggestedSize="900x600"
+            <ContentImage
+                src="/imgs/ai-foundations-overview.png"
+                alt="A comprehensive diagram showing all disciplines contributing to AI with connecting lines to show relationships"
+                caption="The Multi-Disciplinary Foundations of Artificial Intelligence"
             />
 
             <InfoBox type="tip" title="What's Next?">

@@ -285,7 +285,7 @@ export const subjects: Subject[] = [
     },
     {
         id: 'wc',
-        title: 'Web Content Management System',
+        title: 'Web Content',
         slug: 'wc',
         description: 'Learn web content management, CMS platforms, and digital content strategies',
         icon: '🌐',
