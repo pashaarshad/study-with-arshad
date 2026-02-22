@@ -1,0 +1,253 @@
+/* src/app/notes/notes.module.css */
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--text-heading);
+    margin: 0 0 0.75rem 0;
+}
+
+.highlight {
+    color: var(--link-color);
+}
+
+.subtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Subjects Grid */
+.subjectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+/* Subject Card */
+.subjectCard {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.subjectCard:hover {
+    border-color: var(--link-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--bg-tertiary);
+}
+
+.cardIcon {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.cardTitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-heading);
+    margin: 0 0 0.25rem 0;
+}
+
+.cardDescription {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Notes List */
+.notesList {
+    padding: 0.5rem 0;
+}
+
+.noteItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1.5rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: background-color 0.15s ease;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.noteItem:last-child {
+    border-bottom: none;
+}
+
+.noteItem:hover {
+    background-color: var(--bg-hover);
+    text-decoration: none;
+}
+
+.noteIcon {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.noteInfo {
+    flex: 1;
+    min-width: 0;
+}
+
+.noteTitle {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.noteMeta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.unitBadge {
+    display: inline-block;
+    padding: 0.125rem 0.5rem;
+    background-color: var(--link-color);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.noteSize {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.downloadIcon {
+    font-size: 1rem;
+    opacity: 0.5;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.noteItem:hover .downloadIcon {
+    opacity: 1;
+    transform: translateY(2px);
+}
+
+/* Card Footer */
+.cardFooter {
+    padding: 0.75rem 1.5rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    background-color: var(--bg-tertiary);
+}
+
+/* Syllabus Section */
+.syllabusSection {
+    margin-top: 2rem;
+}
+
+.syllabusTitle {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-heading);
+    margin: 0 0 1rem 0;
+}
+
+.syllabusLink {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+}
+
+.syllabusLink:hover {
+    border-color: var(--link-color);
+    background-color: var(--bg-hover);
+    text-decoration: none;
+}
+
+.syllabusIcon {
+    font-size: 2rem;
+}
+
+.syllabusInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.syllabusName {
+    font-weight: 600;
+    color: var(--text-heading);
+    font-size: 1rem;
+}
+
+.syllabusSize {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.downloadBtn {
+    padding: 0.5rem 1.25rem;
+    background-color: var(--link-color);
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: opacity 0.2s ease;
+}
+
+.syllabusLink:hover .downloadBtn {
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .subjectsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .syllabusLink {
+        flex-wrap: wrap;
+    }
+
+    .downloadBtn {
+        width: 100%;
+        text-align: center;
+    }
+}

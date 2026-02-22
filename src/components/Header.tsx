@@ -48,6 +48,15 @@ export default function Header() {
                                 </Link>
                             </li>
                         ))}
+                        <li className={styles.navItem}>
+                            <Link
+                                href="/notes"
+                                className={`${styles.navLink} ${pathname === '/notes' ? styles.active : ''}`}
+                            >
+                                <span className={styles.navIcon}>📄</span>
+                                <span className={styles.navTitle}>PDF Notes</span>
+                            </Link>
+                        </li>
                     </ul>
                 </nav>
 
@@ -86,6 +95,16 @@ export default function Header() {
                             </Link>
                         </li>
                     ))}
+                    <li>
+                        <Link
+                            href="/notes"
+                            className={`${styles.mobileNavLink} ${pathname === '/notes' ? styles.active : ''}`}
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            <span className={styles.navIcon}>📄</span>
+                            <span>PDF Notes</span>
+                        </Link>
+                    </li>
                 </ul>
             </div>
         </header>

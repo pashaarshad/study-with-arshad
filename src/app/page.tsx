@@ -20,8 +20,8 @@ export default function Home() {
             <Link href="/ai/introduction/what-is-ai" className={styles.primaryBtn}>
               Start Learning AI
             </Link>
-            <Link href="#subjects" className={styles.secondaryBtn}>
-              Explore Subjects
+            <Link href="/notes" className={styles.secondaryBtn}>
+              📄 Download Notes
             </Link>
           </div>
         </div>
@@ -34,7 +34,7 @@ export default function Home() {
 
       {/* Subjects Section */}
       <section id="subjects" className={styles.subjects}>
-        <h2 className={styles.sectionTitle}>Available Subjects</h2>
+        <h2 className={styles.sectionTitle}>BCA 6th Semester Subjects</h2>
         <p className={styles.sectionSubtitle}>
           Choose a subject to begin your learning journey
         </p>
@@ -45,8 +45,8 @@ export default function Home() {
               key={subject.id}
               href={subject.units.length > 0
                 ? `/${subject.slug}/${subject.units[0].slug}/${subject.units[0].topics[0].slug}`
-                : '#'}
-              className={`${styles.subjectCard} ${subject.units.length === 0 ? styles.disabled : ''}`}
+                : '/notes'}
+              className={`${styles.subjectCard}`}
             >
               <div className={styles.subjectIcon}>{subject.icon}</div>
               <h3 className={styles.subjectTitle}>{subject.title}</h3>
@@ -58,7 +58,7 @@ export default function Home() {
                   <span>{subject.units.reduce((acc, unit) => acc + unit.topics.length, 0)} Topics</span>
                 </div>
               ) : (
-                <div className={styles.comingSoon}>Coming Soon</div>
+                <div className={styles.comingSoon}>📄 PDF Notes Available</div>
               )}
             </Link>
           ))}
@@ -76,9 +76,9 @@ export default function Home() {
             <p>Detailed explanations with real-world examples and code snippets</p>
           </div>
           <div className={styles.featureCard}>
-            <div className={styles.featureIcon}>🎯</div>
-            <h3>Structured Learning</h3>
-            <p>Well-organized curriculum following university syllabus</p>
+            <div className={styles.featureIcon}>📄</div>
+            <h3>PDF Study Notes</h3>
+            <p>Download free PDF notes for all subjects organized by unit</p>
           </div>
           <div className={styles.featureCard}>
             <div className={styles.featureIcon}>🌙</div>
@@ -95,8 +95,9 @@ export default function Home() {
 
       {/* Footer */}
       <footer className={styles.footer}>
-        <p>© 2024 Study with Arshad. Made with ❤️ for students.</p>
+        <p>© 2025 Study with Arshad. Made with ❤️ for students.</p>
       </footer>
     </div>
   );
 }
+

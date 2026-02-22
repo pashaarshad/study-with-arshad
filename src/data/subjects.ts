@@ -1,6 +1,113 @@
 // src/data/subjects.ts
 import { Subject } from '@/types';
 
+// PDF Notes data for each subject
+export interface PdfNote {
+    title: string;
+    fileName: string;
+    path: string;
+    size: string;
+    unit?: string;
+}
+
+export interface SubjectPdfs {
+    subjectSlug: string;
+    notes: PdfNote[];
+}
+
+export const subjectPdfs: SubjectPdfs[] = [
+    {
+        subjectSlug: 'ai',
+        notes: [
+            {
+                title: 'Unit 1 - AI Notes',
+                fileName: 'Unit_I_AI Notes.pdf',
+                path: '/6-sem-Subjets/AI-notes/Unit_I_AI Notes.pdf',
+                size: '689 KB',
+                unit: 'Unit 1'
+            },
+            {
+                title: 'Unit 2 - AI Notes',
+                fileName: 'UNIT-2 AI notes.pdf',
+                path: '/6-sem-Subjets/AI-notes/UNIT-2 AI notes.pdf',
+                size: '299 KB',
+                unit: 'Unit 2'
+            }
+        ]
+    },
+    {
+        subjectSlug: 'fds',
+        notes: [
+            {
+                title: 'Unit 1 - Fundamentals of Data Science',
+                fileName: 'FDS Unit 1.pdf',
+                path: '/6-sem-Subjets/FDS/FDS Unit 1.pdf',
+                size: '323 KB',
+                unit: 'Unit 1'
+            }
+        ]
+    },
+    {
+        subjectSlug: 'php',
+        notes: [
+            {
+                title: 'Unit 1 - PHP Notes (New)',
+                fileName: 'php notes u1 new.pdf',
+                path: '/6-sem-Subjets/PHP/php notes u1 new.pdf',
+                size: '801 KB',
+                unit: 'Unit 1'
+            },
+            {
+                title: 'Unit 1 - PHP Programming',
+                fileName: 'php u1.pdf',
+                path: '/6-sem-Subjets/PHP/php u1.pdf',
+                size: '1007 KB',
+                unit: 'Unit 1'
+            },
+            {
+                title: 'Unit 2 - PHP Programming',
+                fileName: 'php u2.pdf',
+                path: '/6-sem-Subjets/PHP/php u2.pdf',
+                size: '576 KB',
+                unit: 'Unit 2'
+            },
+            {
+                title: 'PHP Lab Programs',
+                fileName: 'PHP Lab Programs (1).pdf',
+                path: '/6-sem-Subjets/PHP/PHP Lab Programs (1).pdf',
+                size: '139 KB',
+                unit: 'Lab'
+            },
+            {
+                title: 'Unit 1 - Questions',
+                fileName: 'Unit-1 Qustion.pdf',
+                path: '/6-sem-Subjets/PHP/Unit-1 Qustion.pdf',
+                size: '55 KB',
+                unit: 'Question Paper'
+            }
+        ]
+    },
+    {
+        subjectSlug: 'wc',
+        notes: [
+            {
+                title: 'Unit 1 - WCMS',
+                fileName: 'WCMS unit 1.pdf',
+                path: '/6-sem-Subjets/WC/WCMS unit 1.pdf',
+                size: '221 KB',
+                unit: 'Unit 1'
+            },
+            {
+                title: 'Unit 2 - WCMS',
+                fileName: 'WCMS unit2.pdf',
+                path: '/6-sem-Subjets/WC/WCMS unit2.pdf',
+                size: '397 KB',
+                unit: 'Unit 2'
+            }
+        ]
+    }
+];
+
 export const subjects: Subject[] = [
     {
         id: 'ai',
@@ -161,43 +268,27 @@ export const subjects: Subject[] = [
         ]
     },
     {
-        id: 'subject-2',
-        title: 'Subject 2',
-        slug: 'subject-2',
-        description: 'Coming Soon',
-        icon: '📘',
+        id: 'fds',
+        title: 'Fundamentals of Data Science',
+        slug: 'fds',
+        description: 'Learn data analysis, statistics, visualization, and machine learning fundamentals for data-driven decision making',
+        icon: '📊',
         units: []
     },
     {
-        id: 'subject-3',
-        title: 'Subject 3',
-        slug: 'subject-3',
-        description: 'Coming Soon',
-        icon: '📗',
+        id: 'php',
+        title: 'PHP Programming',
+        slug: 'php',
+        description: 'Master PHP for server-side web development, MySQL integration, and dynamic websites',
+        icon: '�',
         units: []
     },
     {
-        id: 'subject-4',
-        title: 'Subject 4',
-        slug: 'subject-4',
-        description: 'Coming Soon',
-        icon: '📙',
-        units: []
-    },
-    {
-        id: 'subject-5',
-        title: 'Subject 5',
-        slug: 'subject-5',
-        description: 'Coming Soon',
-        icon: '📕',
-        units: []
-    },
-    {
-        id: 'subject-6',
-        title: 'Subject 6',
-        slug: 'subject-6',
-        description: 'Coming Soon',
-        icon: '📓',
+        id: 'wc',
+        title: 'Wireless Communication',
+        slug: 'wc',
+        description: 'Study wireless networks, mobile communication, and signal processing fundamentals',
+        icon: '�',
         units: []
     }
 ];
