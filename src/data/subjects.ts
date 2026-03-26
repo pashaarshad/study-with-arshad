@@ -271,9 +271,74 @@ export const subjects: Subject[] = [
         id: 'fds',
         title: 'Fundamentals of Data Science',
         slug: 'fds',
-        description: 'Learn data analysis, statistics, visualization, and machine learning fundamentals for data-driven decision making',
+        description: 'Learn data mining, data warehousing, classification, clustering, and pattern mining for data-driven decision making',
         icon: '📊',
         units: [
+            {
+                id: 'fds-unit-1',
+                title: 'Unit 1: Data Mining',
+                slug: 'data-mining',
+                topics: [
+                    {
+                        id: 'introduction-to-data-mining',
+                        title: 'Introduction to Data Mining',
+                        slug: 'introduction-to-data-mining',
+                        description: 'Data Mining definitions, KDD process, KDD vs DM, DBMS vs DM, techniques, issues, challenges, and applications'
+                    }
+                ]
+            },
+            {
+                id: 'fds-unit-2',
+                title: 'Unit 2: Data Warehouse',
+                slug: 'data-warehouse',
+                topics: [
+                    {
+                        id: 'data-warehouse-concepts',
+                        title: 'Data Warehouse & Preprocessing',
+                        slug: 'data-warehouse-concepts',
+                        description: 'Data Warehouse concepts, ETL, multidimensional models, data cleaning, integration, transformation, reduction, discretization, and OLAP operations'
+                    }
+                ]
+            },
+            {
+                id: 'fds-unit-3',
+                title: 'Unit 3: Mining Frequent Patterns',
+                slug: 'frequent-patterns',
+                topics: [
+                    {
+                        id: 'mining-frequent-patterns',
+                        title: 'Frequent Patterns & Association Rules',
+                        slug: 'mining-frequent-patterns',
+                        description: 'Frequent itemset mining, Apriori algorithm, FP-Growth algorithm, and mining association rules'
+                    }
+                ]
+            },
+            {
+                id: 'fds-unit-4',
+                title: 'Unit 4: Classification',
+                slug: 'classification',
+                topics: [
+                    {
+                        id: 'classification-concepts',
+                        title: 'Classification Methods',
+                        slug: 'classification-concepts',
+                        description: 'Decision Trees, Bayesian Classification, Rule-Based methods, KNN, Prediction, Accuracy, Precision, and Recall'
+                    }
+                ]
+            },
+            {
+                id: 'fds-unit-5',
+                title: 'Unit 5: Clustering',
+                slug: 'clustering',
+                topics: [
+                    {
+                        id: 'clustering-concepts',
+                        title: 'Clustering Methods',
+                        slug: 'clustering-concepts',
+                        description: 'K-Means, Hierarchical Methods, DBSCAN, Grid-Based Methods, and Evaluation of Clustering'
+                    }
+                ]
+            },
             {
                 id: 'fds-ia-prep',
                 title: 'IA Preparation',
