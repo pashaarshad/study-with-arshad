@@ -1,5 +1,5 @@
 import React from 'react';
-import { KeyPoints, InfoBox, ExampleBox, ImagePlaceholder } from '@/components/ContentDisplay';
+import { KeyPoints, InfoBox, ExampleBox, ContentImage } from '@/components/ContentDisplay';
 
 export default function IntroductionToDM() {
     return (
@@ -38,10 +38,10 @@ export default function IntroductionToDM() {
                 </p>
             </ExampleBox>
 
-            <ImagePlaceholder
-                name="DataMiningConcept.png"
-                description="An infographic showing the concept of Data Mining — a large mountain of raw data on the left, with a mining pickaxe extracting golden nuggets labeled 'Patterns', 'Trends', 'Insights', 'Knowledge' on the right. Use a dark blue and gold color scheme with modern flat design."
-                suggestedSize="850x400"
+            <ContentImage
+                src="/imgs/fds/data_mining_concept.png"
+                alt="Infographic showing Data Mining as a pickaxe extracting golden patterns, trends, and knowledge from raw data."
+                caption="Data Mining is the complex process of extracting valuable 'nuggets' of knowledge and hidden patterns from massive mountains of raw data."
             />
 
             <h2 id="why-dm">Why is Data Mining Important?</h2>

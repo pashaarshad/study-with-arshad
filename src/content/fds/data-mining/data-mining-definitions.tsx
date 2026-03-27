@@ -1,5 +1,5 @@
 import React from 'react';
-import { KeyPoints, InfoBox, ExampleBox, ImagePlaceholder } from '@/components/ContentDisplay';
+import { KeyPoints, InfoBox, ExampleBox, ImagePlaceholder, ContentImage } from '@/components/ContentDisplay';
 
 export default function DataMiningDefinitions() {
     return (
@@ -120,10 +120,10 @@ export default function DataMiningDefinitions() {
                 making it a truly interdisciplinary domain:
             </p>
 
-            <ImagePlaceholder
-                name="DataMiningInterdisciplinary.png"
-                description="A hub-and-spoke diagram showing Data Mining at the center, with spokes connecting to: Statistics, Machine Learning, Database Systems, Pattern Recognition, Artificial Intelligence, Information Retrieval, Visualization, and High-Performance Computing. Each spoke has a small icon. Use a modern radial design with gradient colors."
-                suggestedSize="700x500"
+            <ContentImage
+                src="/imgs/fds/dm_inter_disciplinary.png"
+                alt="Hub-and-spoke diagram demonstrating Data Mining as an interdisciplinary field."
+                caption="Data Mining is a highly interdisciplinary field that draws from machine learning, statistics, pattern recognition, and database systems."
             />
 
             <table>
