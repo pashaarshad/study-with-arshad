@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500">
+    <defs>
+        <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0F2027" />
+            <stop offset="50%" stop-color="#203A43" />
+            <stop offset="100%" stop-color="#2C5364" />
+        </linearGradient>
+        <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#F2C94C" />
+            <stop offset="100%" stop-color="#F2994A" />
+        </linearGradient>
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <marker id="arrowX" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#00C9FF"/>
+        </marker>
+        <marker id="arrowY" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#FF512F"/>
+        </marker>
+        <marker id="arrowZ" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#1dd1a1"/>
+        </marker>
+    </defs>
+
+    <rect width="700" height="500" rx="16" fill="url(#bg)" />
+
+    <text x="350" y="50" font-family="'Inter', sans-serif" font-size="28" font-weight="800" fill="#ffffff" text-anchor="middle" filter="url(#glow)">Multidimensional Data Cube</text>
+
+    <!-- Isometric projection base coordinates:
+         Center: 350, 300
+         dx: 80, dy: 46 
+    -->
+    <g transform="translate(350, 330)">
+        
+        <!-- Axes -->
+        <!-- X Axis (Time) pointing right-down -->
+        <line x1="0" y1="0" x2="220" y2="127" stroke="#00C9FF" stroke-width="4" marker-end="url(#arrowX)" />
+        <text x="230" y="145" font-family="'Inter', sans-serif" font-size="16" font-weight="700" fill="#00C9FF">Time</text>
+
+        <!-- Y Axis (Product) pointing left-down -->
+        <line x1="0" y1="0" x2="-220" y2="127" stroke="#FF512F" stroke-width="4" marker-end="url(#arrowY)" />
+        <text x="-260" y="145" font-family="'Inter', sans-serif" font-size="16" font-weight="700" fill="#FF512F">Product</text>
+
+        <!-- Z Axis (Location) pointing up -->
+        <line x1="0" y1="0" x2="0" y2="-250" stroke="#1dd1a1" stroke-width="4" marker-end="url(#arrowZ)" />
+        <text x="0" y="-270" font-family="'Inter', sans-serif" font-size="16" font-weight="700" fill="#1dd1a1" text-anchor="middle">Location</text>
+
+        <!-- 3x3x3 Cube Drawing Iteration -->
+        <!-- To draw cleanly back-to-front: Z from top to bottom (-), X from back to front (+), Y from back to front (+) -->
+        
+        <g stroke="rgba(255,255,255,0.4)" stroke-width="1.5">
+            <!-- Layers -->
+            <!-- Bottom Layer (z = 0) -->
+            <!-- Front faces only for simplicity since it's semi-transparent -->
+            <path d="M 0 0 L 180 -104 L 0 -208 L -180 -104 Z" fill="rgba(29, 209, 161, 0.1)" />
+            
+            <!-- Drawing a prominent cell (e.g. Q3, Mumbai, Samsung) -->
+            <!-- Front block: x=2 (front right), y=2 (front left), z=2 (top) -->
+            
+            <!-- Let's just draw the outline of the main 3x3x3 boundaries -->
+            <!-- X-grid lines -->
+            <line x1="-180" y1="-104" x2="0" y2="0" />
+            <line x1="-120" y1="-138" x2="60" y2="-34" />
+            <line x1="-60" y1="-173" x2="120" y2="-69" />
+            <line x1="0" y1="-208" x2="180" y2="-104" />
+            
+            <!-- Y-grid lines -->
+            <line x1="180" y1="-104" x2="0" y2="0" />
+            <line x1="120" y1="-138" x2="-60" y2="-34" />
+            <line x1="60" y1="-173" x2="-120" y2="-69" />
+            
+            <!-- Z Extrusion Outlines -->
+            <!-- Front edges downwards -->
+            <line x1="0" y1="0" x2="0" y2="150" />
+            <line x1="180" y1="-104" x2="180" y2="46" />
+            <line x1="-180" y1="-104" x2="-180" y2="46" />
+
+            <!-- Sub grid vertical lines -->
+            <line x1="60" y1="-34" x2="60" y2="116" />
+            <line x1="120" y1="-69" x2="120" y2="81" />
+            <line x1="-60" y1="-34" x2="-60" y2="116" />
+            <line x1="-120" y1="-69" x2="-120" y2="81" />
+
+            <!-- Horizontal layers Z -->
+            <path d="M 0 50 L 180 -54 M 0 50 L -180 -54" fill="none" />
+            <path d="M 0 100 L 180 -4 M 0 100 L -180 -4" fill="none" />
+            <path d="M 0 150 L 180 46 M 0 150 L -180 46" fill="none" />
+            <path d="M 180 46 L 0 150 L -180 46" fill="rgba(0, 201, 255, 0.1)" />
+
+            <!-- Top faces for sub-cubes visible -->
+            <path d="M -60 -34 L 0 0 L 60 -34 L 0 -69 Z" fill="rgba(255, 81, 47, 0.4)" />
+            <text x="0" y="-30" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">₹ 8Cr</text>
+
+            <!-- Front face -->
+            <path d="M 0 0 L -60 -34 L -60 16 L 0 50 Z" fill="rgba(255, 81, 47, 0.6)" />
+            <!-- Side face -->
+            <path d="M 0 0 L 60 -34 L 60 16 L 0 50 Z" fill="rgba(255, 81, 47, 0.5)" />
+        </g>
+        
+        <!-- Axis labels mapping -->
+        <text x="60" y="110" font-family="'Inter', sans-serif" font-size="12" fill="#00C9FF">Q1</text>
+        <text x="120" y="75" font-family="'Inter', sans-serif" font-size="12" fill="#00C9FF">Q2</text>
+        <text x="180" y="40" font-family="'Inter', sans-serif" font-size="12" fill="#00C9FF">Q3</text>
+
+        <text x="-60" y="110" font-family="'Inter', sans-serif" font-size="12" fill="#FF512F">Samsung</text>
+        <text x="-120" y="75" font-family="'Inter', sans-serif" font-size="12" fill="#FF512F">LG</text>
+        <text x="-180" y="40" font-family="'Inter', sans-serif" font-size="12" fill="#FF512F">Sony</text>
+
+        <text x="-10" y="-80" font-family="'Inter', sans-serif" font-size="12" fill="#1dd1a1">Mumbai</text>
+        <text x="-10" y="-130" font-family="'Inter', sans-serif" font-size="12" fill="#1dd1a1">Delhi</text>
+        <text x="-10" y="-180" font-family="'Inter', sans-serif" font-size="12" fill="#1dd1a1">Bangalore</text>
+
+    </g>
+
+    <text x="350" y="460" font-family="'Inter', sans-serif" font-size="14" font-weight="500" fill="rgba(255,255,255,0.7)" text-anchor="middle">Data is arranged in a 3D intersection. Highlighted cell = Samsung TVs in Mumbai during Q1.</text>
+</svg>

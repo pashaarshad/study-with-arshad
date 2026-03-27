@@ -1,5 +1,5 @@
 import React from 'react';
-import { KeyPoints, InfoBox, ExampleBox, ImagePlaceholder } from '@/components/ContentDisplay';
+import { KeyPoints, InfoBox, ExampleBox, ContentImage } from '@/components/ContentDisplay';
 
 export default function DWIntroduction() {
     return (
@@ -35,10 +35,10 @@ export default function DWIntroduction() {
 
             <h3>The 4 Key Characteristics</h3>
 
-            <ImagePlaceholder
-                name="DataWarehouseCharacteristics.png"
-                description="A four-quadrant infographic showing the 4 characteristics of Data Warehouse: Subject-Oriented (book icon), Integrated (puzzle pieces), Time-Variant (clock with timeline), Non-Volatile (lock/shield icon). Clean corporate blue and white."
-                suggestedSize="800x500"
+            <ContentImage
+                src="/imgs/fds/dw_characteristics.svg"
+                alt="Infographic showing the 4 characteristics of Data Warehouse: Subject-Oriented, Integrated, Time-Variant, Non-Volatile."
+                caption="A Data Warehouse must satisfy these four defining characteristics proposed by Bill Inmon."
             />
 
             <table>
@@ -124,10 +124,10 @@ export default function DWIntroduction() {
                 data from source systems into the warehouse:
             </p>
 
-            <ImagePlaceholder
-                name="ETLProcess.png"
-                description="A horizontal flow: multiple source icons (MySQL, Excel, API, CSV) → EXTRACT (funnel) → TRANSFORM (gear showing cleaning) → LOAD (arrow into DW cylinder). Blue-green palette."
-                suggestedSize="900x350"
+            <ContentImage
+                src="/imgs/fds/dw_architecture.svg"
+                alt="ETL flow from multiple source icons Extract into Transform and Load into DW."
+                caption="The ETL pipeline Extracting data from numerous silos, Transforming it to a unified standard, and Loading it into the Data Warehouse."
             />
 
             <ol>

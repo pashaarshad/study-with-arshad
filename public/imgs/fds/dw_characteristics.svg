@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+    <defs>
+        <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#0f2027" />
+            <stop offset="50%" stop-color="#203a43" />
+            <stop offset="100%" stop-color="#2c5364" />
+        </linearGradient>
+        <filter id="shadow">
+            <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.25" />
+        </filter>
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <linearGradient id="blueGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00C9FF" />
+            <stop offset="100%" stop-color="#92FE9D" />
+        </linearGradient>
+        <linearGradient id="purpleGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#DA22FF" />
+            <stop offset="100%" stop-color="#9733EE" />
+        </linearGradient>
+        <linearGradient id="orangeGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FF512F" />
+            <stop offset="100%" stop-color="#F09819" />
+        </linearGradient>
+        <linearGradient id="greenGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#11998E" />
+            <stop offset="100%" stop-color="#38EF7D" />
+        </linearGradient>
+    </defs>
+
+    <rect width="800" height="500" rx="20" fill="url(#bg)" />
+
+    <!-- Center Title -->
+    <text x="400" y="250" font-family="'Inter', sans-serif" font-size="28" font-weight="800" fill="#ffffff" text-anchor="middle" filter="url(#glow)">Data Warehouse</text>
+    <text x="400" y="275" font-family="'Inter', sans-serif" font-size="16" font-weight="500" fill="rgba(255,255,255,0.7)" text-anchor="middle">4 Key Characteristics</text>
+    <circle cx="400" cy="250" r="100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+
+    <!-- Top Left quadrant: Subject-Oriented -->
+    <g transform="translate(150, 60)" filter="url(#shadow)">
+        <rect width="250" height="120" rx="16" fill="rgba(0, 201, 255, 0.1)" stroke="url(#blueGlow)" stroke-width="2" />
+        <circle cx="50" cy="60" r="30" fill="url(#blueGlow)" opacity="0.8" />
+        <text x="50" y="70" font-size="28" text-anchor="middle">📖</text>
+        <text x="100" y="45" font-family="'Inter', sans-serif" font-size="18" font-weight="700" fill="#ffffff">Subject-Oriented</text>
+        <text x="100" y="70" font-family="'Inter', sans-serif" font-size="13" font-weight="400" fill="rgba(255,255,255,0.8)">Focuses on key subjects</text>
+        <text x="100" y="90" font-family="'Inter', sans-serif" font-size="13" font-weight="400" fill="rgba(255,255,255,0.8)">like Sales or Product</text>
+    </g>
+
+    <!-- Top Right quadrant: Integrated -->
+    <g transform="translate(420, 60)" filter="url(#shadow)">
+        <rect width="250" height="120" rx="16" fill="rgba(218, 34, 255, 0.1)" stroke="url(#purpleGlow)" stroke-width="2" />
+        <circle cx="50" cy="60" r="30" fill="url(#purpleGlow)" opacity="0.8" />
+        <text x="50" y="70" font-size="28" text-anchor="middle">🧩</text>
+        <text x="100" y="45" font-family="'Inter', sans-serif" font-size="18" font-weight="700" fill="#ffffff">Integrated</text>
+        <text x="100" y="70" font-family="'Inter', sans-serif" font-size="13" font-weight="400" fill="rgba(255,255,255,0.8)">Unified data format</text>
+        <text x="100" y="90" font-family="'Inter', sans-serif" font-size="13" font-weight="400" fill="rgba(255,255,255,0.8)">from multiple sources</text>
+    </g>
+
+    <!-- Bottom Left quadrant: Time-Variant -->
+    <g transform="translate(150, 310)" filter="url(#shadow)">
+        <rect width="250" height="120" rx="16" fill="rgba(255, 81, 47, 0.1)" stroke="url(#orangeGlow)" stroke-width="2" />
+        <circle cx="50" cy="60" r="30" fill="url(#orangeGlow)" opacity="0.8" />
+        <text x="50" y="70" font-size="28" text-anchor="middle">⏱️</text>
+        <text x="100" y="45" font-family="'Inter', sans-serif" font-size="18" font-weight="700" fill="#ffffff">Time-Variant</text>
+        <text x="100" y="70" font-family="'Inter', sans-serif" font-size="13" font-weight="400" fill="rgba(255,255,255,0.8)">Records historical data</text>
+        <text x="100" y="90" font-family="'Inter', sans-serif" font-size="13" font-weight="400" fill="rgba(255,255,255,0.8)">over a long timeline</text>
+    </g>
+
+    <!-- Bottom Right quadrant: Non-Volatile -->
+    <g transform="translate(420, 310)" filter="url(#shadow)">
+        <rect width="250" height="120" rx="16" fill="rgba(17, 153, 142, 0.1)" stroke="url(#greenGlow)" stroke-width="2" />
+        <circle cx="50" cy="60" r="30" fill="url(#greenGlow)" opacity="0.8" />
+        <text x="50" y="70" font-size="28" text-anchor="middle">🛡️</text>
+        <text x="100" y="45" font-family="'Inter', sans-serif" font-size="18" font-weight="700" fill="#ffffff">Non-Volatile</text>
+        <text x="100" y="70" font-family="'Inter', sans-serif" font-size="13" font-weight="400" fill="rgba(255,255,255,0.8)">Read-only format</text>
+        <text x="100" y="90" font-family="'Inter', sans-serif" font-size="13" font-weight="400" fill="rgba(255,255,255,0.8)">never modified or deleted</text>
+    </g>
+</svg>

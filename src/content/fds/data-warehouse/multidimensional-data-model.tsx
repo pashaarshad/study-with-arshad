@@ -40,10 +40,10 @@ export default function MultidimensionalDataModel() {
                 <p>You can instantly answer: <em>"How much did Samsung TVs sell in Mumbai during Q3 2024?"</em></p>
             </ExampleBox>
 
-            <ImagePlaceholder
-                name="DataCube3D.png"
-                description="A 3D cube with axes: Time (Q1-Q4), Location (Mumbai, Delhi, Bangalore), Product (Samsung, LG, Sony). Each cell has a sales value. Semi-transparent cube. Blue, green, purple axes."
-                suggestedSize="700x500"
+            <ContentImage
+                src="/imgs/fds/data_cube_3d.svg"
+                alt="A 3D cube with axes representing Time, Location, and Product. Highlights how data intersects."
+                caption="A Data Cube visualizes how multiple dimensions intersect to provide a specific measurable fact (e.g., Sales)."
             />
 
             <h2 id="schemas">Schema Designs</h2>
@@ -68,10 +68,10 @@ export default function MultidimensionalDataModel() {
                 <li><strong>Disadvantage:</strong> More complex queries, more joins, slower</li>
             </ul>
 
-            <ImagePlaceholder
-                name="StarVsSnowflakeSchema.png"
-                description="Side-by-side comparison: Star Schema (left, central fact table connected to 4 dimension tables in star pattern) and Snowflake Schema (right, same fact table but dimensions further split). Blue for fact, green for dimensions."
-                suggestedSize="900x450"
+            <ContentImage
+                src="/imgs/fds/star_vs_snowflake.svg"
+                alt="Diagram showing a simple Star Schema vs a complex Snowflake Schema."
+                caption="Star Schema uses flat dimension tables, while Snowflake Schema normalizes dimensions into sub-tables."
             />
 
             <table>
@@ -94,10 +94,10 @@ export default function MultidimensionalDataModel() {
                 multidimensional data. Think of it as "playing" with the Data Cube — rotating, zooming, slicing.
             </p>
 
-            <ImagePlaceholder
-                name="OLAPOperations.png"
-                description="Infographic showing 5 OLAP operations: Roll-Up (cubes merging up), Drill-Down (cube splitting down), Slice (plane cutting cube), Dice (smaller cube extracted), Pivot (cube rotating). Dark theme with neon highlights."
-                suggestedSize="900x500"
+            <ContentImage
+                src="/imgs/fds/olap_operations.svg"
+                alt="Infographic showing 5 OLAP operations: Roll-Up, Drill-Down, Slice, Dice, and Pivot."
+                caption="The 5 major OLAP operations allow analysts to view multidimensional data from multiple granularities and perspectives."
             />
 
             <h3>1. Roll-Up (Drill-Up) ⬆️</h3>
