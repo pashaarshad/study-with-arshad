@@ -1,5 +1,5 @@
 import React from 'react';
-import { KeyPoints, InfoBox, ExampleBox, ImagePlaceholder } from '@/components/ContentDisplay';
+import { KeyPoints, InfoBox, ExampleBox, ContentImage } from '@/components/ContentDisplay';
 
 export default function DBMSvsDataMining() {
     return (
@@ -56,10 +56,10 @@ export default function DBMSvsDataMining() {
 
             <h2 id="comparison-table">DBMS vs Data Mining — Complete Comparison</h2>
 
-            <ImagePlaceholder
-                name="DBMSvsDataMining.png"
-                description="A split comparison infographic showing DBMS on the left (filing cabinet icon with organized folders, labeled 'Store & Retrieve') and Data Mining on the right (magnifying glass over data patterns with lightbulb, labeled 'Discover & Predict'). Connected by a 'vs' badge in the center. Blue for DBMS, purple for Data Mining."
-                suggestedSize="850x400"
+            <ContentImage
+                src="/imgs/fds/dbms_vs_data_mining.svg"
+                alt="Split comparison showing DBMS querying specific data vs Data Mining discovering hidden patterns."
+                caption="DBMS retrieves known information, while Data Mining discovers unknown patterns and predictions."
             />
 
             <table>

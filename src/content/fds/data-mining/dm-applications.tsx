@@ -1,5 +1,5 @@
 import React from 'react';
-import { KeyPoints, InfoBox, ExampleBox, ImagePlaceholder } from '@/components/ContentDisplay';
+import { KeyPoints, InfoBox, ExampleBox, ContentImage } from '@/components/ContentDisplay';
 
 export default function DMApplications() {
     return (
@@ -20,10 +20,10 @@ export default function DMApplications() {
                 ]}
             />
 
-            <ImagePlaceholder
-                name="DataMiningApplications.png"
-                description="A circular infographic showing 7 major application areas of Data Mining arranged in a wheel: Retail, Banking, Healthcare, Education, Telecommunications, Web/Social Media, and Scientific Research. Each segment has a small icon and label. Center shows 'Data Mining Applications'."
-                suggestedSize="700x700"
+            <ContentImage
+                src="/imgs/fds/dm_applications.svg"
+                alt="Circular infographic showing 7 major application areas of Data Mining: Retail, Banking, Healthcare, Education, Telecom, Web/Social, and Science."
+                caption="Data Mining is applied across virtually every major modern industry to extract actionable insights."
             />
 
             <h2 id="retail">1. Market Basket Analysis (Retail) 🛒</h2>

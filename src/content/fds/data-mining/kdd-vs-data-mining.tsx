@@ -1,5 +1,5 @@
 import React from 'react';
-import { KeyPoints, InfoBox, ExampleBox, ImagePlaceholder } from '@/components/ContentDisplay';
+import { KeyPoints, InfoBox, ExampleBox, ContentImage } from '@/components/ContentDisplay';
 
 export default function KDDvsDataMining() {
     return (
@@ -37,10 +37,10 @@ export default function KDDvsDataMining() {
                 — Fayyad, Piatetsky-Shapiro, and Smyth (1996)
             </blockquote>
 
-            <ImagePlaceholder
-                name="KDDProcess.png"
-                description="A detailed flowchart showing all 7 steps of the KDD Process in a horizontal pipeline: Data Cleaning → Data Integration → Data Selection → Data Transformation → Data Mining → Pattern Evaluation → Knowledge Representation. Each step should be in a rounded rectangle with a small icon, connected by arrows. Use gradient blue-to-purple color scheme with white text."
-                suggestedSize="900x350"
+            <ContentImage
+                src="/imgs/fds/kdd_process.svg"
+                alt="Flowchart showing all 7 steps of the KDD Process from Data Cleaning to Knowledge Representation."
+                caption="The 7 step KDD Process pipeline. Note how Data Mining is just one specific step (Step 5) within the larger context."
             />
 
             <h2 id="kdd-steps">The 7 Steps of KDD Process (Very Important ⭐)</h2>
@@ -142,10 +142,10 @@ export default function KDDvsDataMining() {
                 </p>
             </ExampleBox>
 
-            <ImagePlaceholder
-                name="KDDStepsDetailed.png"
-                description="A vertical infographic showing all 7 KDD steps as stacked cards, each with a small icon and one-line description. Step 5 (Data Mining) highlighted in gold as the core step. Modern card-style design with gradients."
-                suggestedSize="600x800"
+            <ContentImage
+                src="/imgs/fds/kdd_steps_detailed.svg"
+                alt="A vertical infographic showing all 7 KDD steps as stacked cards. Step 5 (Data Mining) is highlighted."
+                caption="A detailed view of the 7 steps in the Knowledge Discovery in Databases (KDD) process."
             />
 
             <h2 id="kdd-vs-dm-table">KDD vs Data Mining — Comparison Table</h2>

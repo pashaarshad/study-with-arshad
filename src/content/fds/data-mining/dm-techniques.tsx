@@ -1,5 +1,5 @@
 import React from 'react';
-import { KeyPoints, InfoBox, ExampleBox, ImagePlaceholder } from '@/components/ContentDisplay';
+import { KeyPoints, InfoBox, ExampleBox, ContentImage } from '@/components/ContentDisplay';
 
 export default function DMTechniques() {
     return (
@@ -23,10 +23,10 @@ export default function DMTechniques() {
 
             <h2 id="overview">Overview of Data Mining Techniques</h2>
 
-            <ImagePlaceholder
-                name="DMTechniquesOverview.png"
-                description="A mind map or tree diagram showing the major Data Mining techniques. Central node: 'Data Mining Techniques'. Branches: Classification, Clustering, Association Rules, Regression, Anomaly Detection, Prediction. Each branch has a small icon and one example. Use colorful modern design."
-                suggestedSize="850x450"
+            <ContentImage
+                src="/imgs/fds/dm_techniques_overview.svg"
+                alt="Mind map showing Data Mining Techniques: Classification, Clustering, Association Rules, Regression, Anomaly Detection, and Prediction."
+                caption="The six major Data Mining techniques and their primary use cases."
             />
 
             <table>

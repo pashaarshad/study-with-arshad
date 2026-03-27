@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+    <defs>
+        <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#1A2980" />
+            <stop offset="100%" stop-color="#26D0CE" />
+        </linearGradient>
+        <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15" />
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05" />
+        </linearGradient>
+        <filter id="shadow">
+            <feDropShadow dx="0" dy="6" stdDeviation="4" flood-opacity="0.25" />
+        </filter>
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <path id="arrow_down" d="M 300 0 L 300 20 L 295 15 M 300 20 L 305 15" stroke="rgba(255,255,255,0.6)" stroke-width="2" fill="none"/>
+    </defs>
+
+    <!-- Background -->
+    <rect width="600" height="800" fill="url(#bg)" rx="16" />
+    
+    <!-- Title -->
+    <text x="300" y="50" font-family="'Inter', -apple-system, sans-serif" font-size="24" font-weight="700" fill="#ffffff" text-anchor="middle" filter="url(#glow)">7 Steps of KDD Detailed</text>
+
+    <!-- Step 1 -->
+    <g transform="translate(60, 80)" filter="url(#shadow)">
+        <rect width="480" height="70" rx="12" fill="url(#card)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" />
+        <circle cx="45" cy="35" r="20" fill="rgba(255,255,255,0.2)" />
+        <text x="45" y="42" font-size="20" text-anchor="middle">🧹</text>
+        <text x="85" y="32" font-family="'Inter', sans-serif" font-size="16" font-weight="700" fill="#ffffff">Step 1: Data Cleaning</text>
+        <text x="85" y="52" font-family="'Inter', sans-serif" font-size="13" font-weight="400" fill="rgba(255,255,255,0.8)">Remove noise, missing values, and inconsistencies.</text>
+    </g>
+
+    <!-- Arrow -->
+    <g transform="translate(0, 155)"><use href="#arrow_down" /></g>
+
+    <!-- Step 2 -->
+    <g transform="translate(60, 180)" filter="url(#shadow)">
+        <rect width="480" height="70" rx="12" fill="url(#card)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" />
+        <circle cx="45" cy="35" r="20" fill="rgba(255,255,255,0.2)" />
+        <text x="45" y="42" font-size="20" text-anchor="middle">🔗</text>
+        <text x="85" y="32" font-family="'Inter', sans-serif" font-size="16" font-weight="700" fill="#ffffff">Step 2: Data Integration</text>
+        <text x="85" y="52" font-family="'Inter', sans-serif" font-size="13" font-weight="400" fill="rgba(255,255,255,0.8)">Combine data from multiple heterogeneous sources.</text>
+    </g>
+
+    <!-- Arrow -->
+    <g transform="translate(0, 255)"><use href="#arrow_down" /></g>
+
+    <!-- Step 3 -->
+    <g transform="translate(60, 280)" filter="url(#shadow)">
+        <rect width="480" height="70" rx="12" fill="url(#card)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" />
+        <circle cx="45" cy="35" r="20" fill="rgba(255,255,255,0.2)" />
+        <text x="45" y="42" font-size="20" text-anchor="middle">🎯</text>
+        <text x="85" y="32" font-family="'Inter', sans-serif" font-size="16" font-weight="700" fill="#ffffff">Step 3: Data Selection</text>
+        <text x="85" y="52" font-family="'Inter', sans-serif" font-size="13" font-weight="400" fill="rgba(255,255,255,0.8)">Select only the relevant data needed for analysis.</text>
+    </g>
+
+    <!-- Arrow -->
+    <g transform="translate(0, 355)"><use href="#arrow_down" /></g>
+
+    <!-- Step 4 -->
+    <g transform="translate(60, 380)" filter="url(#shadow)">
+        <rect width="480" height="70" rx="12" fill="url(#card)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" />
+        <circle cx="45" cy="35" r="20" fill="rgba(255,255,255,0.2)" />
+        <text x="45" y="42" font-size="20" text-anchor="middle">🔄</text>
+        <text x="85" y="32" font-family="'Inter', sans-serif" font-size="16" font-weight="700" fill="#ffffff">Step 4: Data Transformation</text>
+        <text x="85" y="52" font-family="'Inter', sans-serif" font-size="13" font-weight="400" fill="rgba(255,255,255,0.8)">Transform data into appropriate forms (e.g., normalization).</text>
+    </g>
+
+    <!-- Arrow -->
+    <g transform="translate(0, 455)"><use href="#arrow_down" /></g>
+
+    <!-- Step 5 (HIGHLIGHTED) -->
+    <g transform="translate(50, 480)" filter="url(#shadow)">
+        <rect width="500" height="90" rx="16" fill="rgba(255, 215, 0, 0.25)" stroke="#FFD700" stroke-width="3" />
+        <circle cx="55" cy="45" r="25" fill="rgba(255, 215, 0, 0.4)" />
+        <text x="55" y="53" font-size="24" text-anchor="middle">⛏️</text>
+        <text x="95" y="38" font-family="'Inter', sans-serif" font-size="18" font-weight="800" fill="#FFD700" filter="url(#glow)">Step 5: Data Mining (Core Step!)</text>
+        <text x="95" y="62" font-family="'Inter', sans-serif" font-size="14" font-weight="500" fill="rgba(255,255,255,0.9)">Intelligent methods are applied to extract data patterns.</text>
+    </g>
+
+    <!-- Arrow -->
+    <g transform="translate(0, 575)"><use href="#arrow_down" /></g>
+
+    <!-- Step 6 -->
+    <g transform="translate(60, 600)" filter="url(#shadow)">
+        <rect width="480" height="70" rx="12" fill="url(#card)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" />
+        <circle cx="45" cy="35" r="20" fill="rgba(255,255,255,0.2)" />
+        <text x="45" y="42" font-size="20" text-anchor="middle">📈</text>
+        <text x="85" y="32" font-family="'Inter', sans-serif" font-size="16" font-weight="700" fill="#ffffff">Step 6: Pattern Evaluation</text>
+        <text x="85" y="52" font-family="'Inter', sans-serif" font-size="13" font-weight="400" fill="rgba(255,255,255,0.8)">Identify truly interesting patterns representing knowledge.</text>
+    </g>
+
+    <!-- Arrow -->
+    <g transform="translate(0, 675)"><use href="#arrow_down" /></g>
+
+    <!-- Step 7 -->
+    <g transform="translate(60, 700)" filter="url(#shadow)">
+        <rect width="480" height="70" rx="12" fill="url(#card)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" />
+        <circle cx="45" cy="35" r="20" fill="rgba(255,255,255,0.2)" />
+        <text x="45" y="42" font-size="20" text-anchor="middle">💡</text>
+        <text x="85" y="32" font-family="'Inter', sans-serif" font-size="16" font-weight="700" fill="#ffffff">Step 7: Knowledge Representation</text>
+        <text x="85" y="52" font-family="'Inter', sans-serif" font-size="13" font-weight="400" fill="rgba(255,255,255,0.8)">Visualize and present the mined knowledge to users.</text>
+    </g>
+
+</svg>
