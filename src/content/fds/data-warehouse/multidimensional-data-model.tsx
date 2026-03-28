@@ -1,6 +1,5 @@
 import React from 'react';
-import { KeyPoints, InfoBox, ExampleBox, ImagePlaceholder } from '@/components/ContentDisplay';
-
+import { KeyPoints, InfoBox, ExampleBox, ImagePlaceholder, ContentImage } from '@/components/ContentDisplay';
 export default function MultidimensionalDataModel() {
     return (
         <div>
@@ -104,16 +103,16 @@ export default function MultidimensionalDataModel() {
             <p><strong>Aggregating</strong> data by climbing up a hierarchy.</p>
             <ExampleBox title="Roll-Up Example">
                 <p><strong>Before:</strong> Sales for Mumbai, Pune, Nagpur<br />
-                <strong>After:</strong> Sales for Maharashtra (= Mumbai + Pune + Nagpur)<br />
-                Or: Daily → Monthly → Quarterly → Yearly</p>
+                    <strong>After:</strong> Sales for Maharashtra (= Mumbai + Pune + Nagpur)<br />
+                    Or: Daily → Monthly → Quarterly → Yearly</p>
             </ExampleBox>
 
             <h3>2. Drill-Down ⬇️</h3>
             <p><strong>Reverse of Roll-Up.</strong> Breaks summary into detail.</p>
             <ExampleBox title="Drill-Down Example">
                 <p><strong>Before:</strong> India total = ₹50 Crore<br />
-                <strong>After:</strong> Maharashtra: ₹15 Cr, Karnataka: ₹12 Cr, Tamil Nadu: ₹10 Cr...<br />
-                Go deeper: Maharashtra → Mumbai: ₹8 Cr, Pune: ₹4 Cr, Nagpur: ₹3 Cr</p>
+                    <strong>After:</strong> Maharashtra: ₹15 Cr, Karnataka: ₹12 Cr, Tamil Nadu: ₹10 Cr...<br />
+                    Go deeper: Maharashtra → Mumbai: ₹8 Cr, Pune: ₹4 Cr, Nagpur: ₹3 Cr</p>
             </ExampleBox>
 
             <h3>3. Slice 🔪</h3>
@@ -126,15 +125,15 @@ export default function MultidimensionalDataModel() {
             <p>Selecting <strong>multiple values</strong> for two or more dimensions → smaller sub-cube.</p>
             <ExampleBox title="Dice Example">
                 <p><strong>Dice:</strong> Time = {"{"}Q2, Q3{"}"}, Location = {"{"}Mumbai, Delhi{"}"}, Product = {"{"}Samsung, LG{"}"}<br />
-                Result: A smaller cube with only selected values.</p>
+                    Result: A smaller cube with only selected values.</p>
             </ExampleBox>
 
             <h3>5. Pivot (Rotate) 🔄</h3>
             <p><strong>Rotating</strong> the cube to view from a different perspective.</p>
             <ExampleBox title="Pivot Example">
                 <p><strong>Before:</strong> Rows = Products, Columns = Time<br />
-                <strong>After:</strong> Rows = Time, Columns = Products<br />
-                Same data, different view — revealing different trends!</p>
+                    <strong>After:</strong> Rows = Time, Columns = Products<br />
+                    Same data, different view — revealing different trends!</p>
             </ExampleBox>
 
             <h2 id="rolap-molap-holap">ROLAP vs MOLAP vs HOLAP</h2>
