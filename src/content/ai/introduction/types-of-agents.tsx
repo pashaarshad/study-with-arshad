@@ -1,6 +1,6 @@
 // src/content/ai/introduction/types-of-agents.tsx
 import React from 'react';
-import { KeyPoints, InfoBox, ExampleBox, CodeBlock, ImagePlaceholder } from '@/components/ContentDisplay';
+import { KeyPoints, InfoBox, ExampleBox, CodeBlock, ContentImage } from '@/components/ContentDisplay';
 
 export default function TypesOfAgents() {
     return (
@@ -69,10 +69,10 @@ export default function TypesOfAgents() {
                 </tbody>
             </table>
 
-            <ImagePlaceholder
-                name="agent-types-hierarchy"
-                description="A diagram showing the hierarchy of agent types from simple to complex, with arrows showing increasing capability"
-                suggestedSize="900x500"
+            <ContentImage
+                src="/imgs/agent-types-hierarchy.svg"
+                alt="A diagram showing the hierarchy of agent types from simple to complex, with arrows showing increasing capability"
+                caption="Hierarchy of AI Agent Types"
             />
 
             <h2 id="simple-reflex">1. Simple Reflex Agents</h2>
@@ -199,10 +199,10 @@ simulate_simple_reflex()
                 <li>When resources (memory/CPU) are limited</li>
             </ul>
 
-            <ImagePlaceholder
-                name="simple-reflex-agent-diagram"
-                description="Diagram showing sensors → condition-action rules → actuators, with no memory component"
-                suggestedSize="800x400"
+            <ContentImage
+                src="/imgs/simple-reflex-agent-diagram.svg"
+                alt="Diagram showing sensors → condition-action rules → actuators, with no memory component"
+                caption="Architecture of a Simple Reflex Agent"
             />
 
             <h2 id="model-based">2. Model-Based Reflex Agents</h2>
@@ -352,10 +352,10 @@ simulate_model_based()`}
                 </tbody>
             </table>
 
-            <ImagePlaceholder
-                name="model-based-agent-diagram"
-                description="Diagram showing sensors → state update (with internal model) → condition-action rules → actuators"
-                suggestedSize="800x450"
+            <ContentImage
+                src="/imgs/model-based-agent-diagram.svg"
+                alt="Diagram showing sensors → state update (with internal model) → condition-action rules → actuators"
+                caption="Architecture of a Model-Based Reflex Agent"
             />
 
             <h2 id="goal-based">3. Goal-Based Agents</h2>
@@ -504,10 +504,10 @@ simulate_goal_based()
                 </p>
             </InfoBox>
 
-            <ImagePlaceholder
-                name="goal-based-agent-diagram"
-                description="Diagram showing sensors → state → goal checking → search/planning → actuators"
-                suggestedSize="800x450"
+            <ContentImage
+                src="/imgs/goal-based-agent-diagram.svg"
+                alt="Diagram showing sensors → state → goal checking → search/planning → actuators"
+                caption="Architecture of a Goal-Based Agent"
             />
 
             <h2 id="utility-based">4. Utility-Based Agents</h2>
@@ -670,10 +670,10 @@ EU = 0.99 × 10 + 0.01 × (-1000) = 9.9 - 10 = -0.1
 This action has negative expected utility — don't do it!`}</code></pre>
             </InfoBox>
 
-            <ImagePlaceholder
-                name="utility-based-agent-diagram"
-                description="Diagram showing sensors → state → utility function evaluation → action selection → actuators"
-                suggestedSize="800x450"
+            <ContentImage
+                src="/imgs/utility-based-agent-diagram.svg"
+                alt="Diagram showing sensors → state → utility function evaluation → action selection → actuators"
+                caption="Architecture of a Utility-Based Agent"
             />
 
             <h2 id="learning-agents">5. Learning Agents</h2>
@@ -823,10 +823,10 @@ simulate_learning_agent()`}
                 />
             </ExampleBox>
 
-            <ImagePlaceholder
-                name="learning-agent-diagram"
-                description="Diagram showing the four components: Performance element, Critic, Learning element, Problem generator, and their connections"
-                suggestedSize="900x500"
+            <ContentImage
+                src="/imgs/learning-agent-diagram.svg"
+                alt="Diagram showing the four components: Performance element, Critic, Learning element, Problem generator, and their connections"
+                caption="Architecture of a Learning Agent"
             />
 
             <h2 id="comparison">Comparison of Agent Types</h2>

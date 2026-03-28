@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+    <defs>
+        <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0f2027" />
+            <stop offset="50%" stop-color="#203a43" />
+            <stop offset="100%" stop-color="#2c5364" />
+        </linearGradient>
+        <linearGradient id="cubeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#F2C94C" />
+            <stop offset="100%" stop-color="#F2994A" />
+        </linearGradient>
+        <filter id="shadow">
+            <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.4" />
+        </filter>
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <rect width="900" height="500" rx="16" fill="url(#bg)" />
+
+    <text x="450" y="50" font-family="'Inter', sans-serif" font-size="28" font-weight="800" fill="#ffffff" text-anchor="middle" filter="url(#glow)">OLAP Operations</text>
+
+    <!-- Base component for reusable cube drawing -->
+    <g id="miniCube" stroke="#fff" stroke-width="1.5">
+        <path d="M 0 0 L 20 -11 L 40 0 L 20 11 Z" fill="rgba(242, 201, 76, 0.8)" />
+        <path d="M 0 0 L 20 11 L 20 31 L 0 20 Z" fill="rgba(242, 201, 76, 0.5)" />
+        <path d="M 40 0 L 20 11 L 20 31 L 40 20 Z" fill="rgba(242, 201, 76, 0.3)" />
+    </g>
+
+    <!-- 1. Roll-Up -->
+    <g transform="translate(100, 150)">
+        <text x="50" y="-40" font-family="'Inter', sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">Roll-Up ⬆️</text>
+        <g transform="translate(20, -10)"><use href="#miniCube" /><use href="#miniCube" x="0" y="20" /></g>
+        <g transform="translate(40, 2)"><use href="#miniCube" /><use href="#miniCube" x="0" y="20" /></g>
+        <g transform="translate(0, 2)"><use href="#miniCube" /><use href="#miniCube" x="0" y="20" /></g>
+        
+        <path d="M 50 70 L 50 110" stroke="#fff" stroke-width="3" marker-end="url(#arrowZ)" stroke-dasharray="4" />
+        <path d="M 50 110 L 45 100 M 50 110 L 55 100" stroke="#fff" stroke-width="3" fill="none" />
+        
+        <g transform="translate(30, 130)">
+            <use href="#miniCube" transform="scale(1.5)" />
+        </g>
+        <text x="50" y="210" font-family="'Inter', sans-serif" font-size="12" fill="rgba(255,255,255,0.7)" text-anchor="middle">Details → Summary</text>
+    </g>
+
+    <!-- 2. Drill-Down -->
+    <g transform="translate(300, 150)">
+        <text x="50" y="-40" font-family="'Inter', sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">Drill-Down ⬇️</text>
+        <g transform="translate(30, -10)">
+            <use href="#miniCube" transform="scale(1.5)" />
+        </g>
+        
+        <path d="M 50 70 L 50 110" stroke="#fff" stroke-width="3" marker-end="url(#arrowZ)" stroke-dasharray="4" />
+        <path d="M 50 110 L 45 100 M 50 110 L 55 100" stroke="#fff" stroke-width="3" fill="none" />
+        
+        <g transform="translate(20, 110)"><use href="#miniCube" /><use href="#miniCube" x="0" y="20" /></g>
+        <g transform="translate(40, 122)"><use href="#miniCube" /><use href="#miniCube" x="0" y="20" /></g>
+        <g transform="translate(0, 122)"><use href="#miniCube" /><use href="#miniCube" x="0" y="20" /></g>
+        <text x="50" y="210" font-family="'Inter', sans-serif" font-size="12" fill="rgba(255,255,255,0.7)" text-anchor="middle">Summary → Details</text>
+    </g>
+
+    <!-- 3. Slice -->
+    <g transform="translate(500, 150)">
+        <text x="50" y="-40" font-family="'Inter', sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">Slice 🔪</text>
+        <g transform="translate(20, -10)"><use href="#miniCube" /><use href="#miniCube" x="0" y="20" /></g>
+        <g transform="translate(40, 2)"><use href="#miniCube" /><use href="#miniCube" x="0" y="20" /></g>
+        <g transform="translate(0, 2)"><use href="#miniCube" /><use href="#miniCube" x="0" y="20" /></g>
+        
+        <!-- Slicing plane -->
+        <path d="M -10 -10 L 70 30 L 70 60 L -10 20 Z" fill="rgba(0, 201, 255, 0.4)" stroke="#00C9FF" stroke-width="2" />
+        
+        <path d="M 50 70 L 50 110" stroke="#fff" stroke-width="3" stroke-dasharray="4" />
+        <path d="M 50 110 L 45 100 M 50 110 L 55 100" stroke="#fff" stroke-width="3" fill="none" />
+        
+        <!-- The Slice result -->
+        <g transform="translate(0, 130)">
+            <path d="M 0 0 L 40 20 L 80 0 L 40 -20 Z" fill="rgba(242, 201, 76, 0.8)" stroke="#fff" />
+            <path d="M 0 20 L 40 40 L 80 20 L 40 0 Z" fill="rgba(242, 201, 76, 0.8)" stroke="#fff" />
+        </g>
+        <text x="50" y="210" font-family="'Inter', sans-serif" font-size="12" fill="rgba(255,255,255,0.7)" text-anchor="middle">Extract 2D Table</text>
+    </g>
+
+    <!-- 4. Dice & Pivot grouped horizontally -->
+    <!-- Dice -->
+    <g transform="translate(150, 420)">
+        <text x="50" y="-40" font-family="'Inter', sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">Dice 🎲</text>
+        <g transform="translate(20, -10)"><use href="#miniCube" /><use href="#miniCube" x="0" y="20" /></g>
+        <g transform="translate(40, 2)"><use href="#miniCube" /><use href="#miniCube" x="0" y="20" /></g>
+        <g transform="translate(0, 2)"><use href="#miniCube" /><use href="#miniCube" x="0" y="20" /></g>
+        
+        <path d="M 90 20 L 130 20" stroke="#fff" stroke-width="3" stroke-dasharray="4" />
+        <path d="M 130 20 L 120 15 M 130 20 L 120 25" stroke="#fff" stroke-width="3" fill="none" />
+        
+        <!-- Extracted Sub-cube -->
+        <g transform="translate(150, 0)">
+            <use href="#miniCube" />
+            <use href="#miniCube" x="20" y="11" />
+            <use href="#miniCube" x="-20" y="11" />
+        </g>
+        <text x="170" y="70" font-family="'Inter', sans-serif" font-size="12" fill="rgba(255,255,255,0.7)" text-anchor="middle">Extract Sub-Cube</text>
+    </g>
+
+    <!-- Pivot -->
+    <g transform="translate(500, 420)">
+        <text x="50" y="-40" font-family="'Inter', sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">Pivot 🔄</text>
+        <g transform="translate(20, -10)"><use href="#miniCube" /><use href="#miniCube" x="0" y="20" /></g>
+        <g transform="translate(40, 2)"><use href="#miniCube" /><use href="#miniCube" x="0" y="20" /></g>
+        <g transform="translate(0, 2)"><use href="#miniCube" /><use href="#miniCube" x="0" y="20" /></g>
+        
+        <!-- Rotate Arrow -->
+        <path d="M 90 -10 A 30 20 0 1 1 90 50" fill="none" stroke="#00C9FF" stroke-width="3" stroke-dasharray="4" />
+        <path d="M 90 -10 L 98 -5 M 90 -10 L 98 -15" stroke="#00C9FF" stroke-width="3" fill="none" />
+        
+        <g transform="translate(170, 0)">
+            <!-- Rotated orientation representation -->
+            <path d="M 0 0 L -20 11 L 0 22 L 20 11 Z" fill="rgba(242, 201, 76, 0.8)" stroke="#fff" />
+            <path d="M -20 11 L -20 31 L 0 42 L 0 22 Z" fill="rgba(242, 201, 76, 0.5)" stroke="#fff" />
+            <path d="M 20 11 L 20 31 L 0 42 L 0 22 Z" fill="rgba(242, 201, 76, 0.3)" stroke="#fff" />
+        </g>
+        <text x="170" y="70" font-family="'Inter', sans-serif" font-size="12" fill="rgba(255,255,255,0.7)" text-anchor="middle">Rotate Axes</text>
+    </g>
+
+</svg>

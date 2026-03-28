@@ -271,9 +271,212 @@ export const subjects: Subject[] = [
         id: 'fds',
         title: 'Fundamentals of Data Science',
         slug: 'fds',
-        description: 'Learn data analysis, statistics, visualization, and machine learning fundamentals for data-driven decision making',
+        description: 'Learn data mining, data warehousing, classification, clustering, and pattern mining for data-driven decision making',
         icon: '📊',
         units: [
+            {
+                id: 'fds-unit-1',
+                title: 'Unit 1: Data Mining',
+                slug: 'data-mining',
+                topics: [
+                    {
+                        id: 'dm-introduction',
+                        title: 'Introduction to Data Mining',
+                        slug: 'introduction',
+                        description: 'What is Data Mining, importance, and real-world examples'
+                    },
+                    {
+                        id: 'dm-definitions',
+                        title: 'Data Mining Definitions',
+                        slug: 'data-mining-definitions',
+                        description: 'Formal definitions, key terminology, and interdisciplinary nature'
+                    },
+                    {
+                        id: 'dm-kdd',
+                        title: 'KDD vs Data Mining',
+                        slug: 'kdd-vs-data-mining',
+                        description: 'Knowledge Discovery in Databases (KDD) process and comparison with Data Mining'
+                    },
+                    {
+                        id: 'dm-dbms',
+                        title: 'DBMS vs Data Mining',
+                        slug: 'dbms-vs-data-mining',
+                        description: 'How Data Mining differs from traditional Database Management Systems'
+                    },
+                    {
+                        id: 'dm-techniques',
+                        title: 'DM Techniques',
+                        slug: 'dm-techniques',
+                        description: 'Classification, Clustering, Association Rules, Regression, Anomaly Detection, and Prediction'
+                    },
+                    {
+                        id: 'dm-problems',
+                        title: 'Problems, Issues & Challenges',
+                        slug: 'problems-issues-challenges',
+                        description: 'Data quality, scalability, privacy, complexity, interpretability challenges'
+                    },
+                    {
+                        id: 'dm-applications',
+                        title: 'DM Applications',
+                        slug: 'dm-applications',
+                        description: 'Applications in retail, banking, healthcare, education, telecom, web, and science'
+                    }
+                ]
+            },
+            {
+                id: 'fds-unit-2',
+                title: 'Unit 2: Data Warehouse',
+                slug: 'data-warehouse',
+                topics: [
+                    {
+                        id: 'dw-introduction',
+                        title: 'Introduction to Data Warehouse',
+                        slug: 'introduction',
+                        description: 'Definition, 4 characteristics, OLTP vs OLAP, and ETL process'
+                    },
+                    {
+                        id: 'dw-multidimensional',
+                        title: 'Multidimensional Data Model',
+                        slug: 'multidimensional-data-model',
+                        description: 'Facts, Dimensions, Star vs Snowflake Schema, OLAP Operations, ROLAP/MOLAP/HOLAP'
+                    },
+                    {
+                        id: 'dw-cleaning',
+                        title: 'Data Cleaning',
+                        slug: 'data-cleaning',
+                        description: 'Handling missing values, noisy data (binning), and inconsistent data'
+                    },
+                    {
+                        id: 'dw-integration',
+                        title: 'Data Integration & Transformation',
+                        slug: 'data-integration-transformation',
+                        description: 'Schema integration, normalization, aggregation, generalization, attribute construction'
+                    },
+                    {
+                        id: 'dw-reduction',
+                        title: 'Data Reduction & Discretization',
+                        slug: 'data-reduction-discretization',
+                        description: 'Dimensionality reduction (PCA), numerosity reduction, compression, and discretization'
+                    }
+                ]
+            },
+            {
+                id: 'fds-unit-3',
+                title: 'Unit 3: Mining Frequent Patterns',
+                slug: 'frequent-patterns',
+                topics: [
+                    {
+                        id: 'fp-basic-concepts',
+                        title: 'Basic Concepts',
+                        slug: 'basic-concepts',
+                        description: 'Frequent patterns, market basket analysis, support, confidence, and lift'
+                    },
+                    {
+                        id: 'fp-apriori',
+                        title: 'Apriori Algorithm',
+                        slug: 'apriori-algorithm',
+                        description: 'Apriori property, candidate generation, step-by-step worked example'
+                    },
+                    {
+                        id: 'fp-fpgrowth',
+                        title: 'FP-Growth Algorithm',
+                        slug: 'fp-growth-algorithm',
+                        description: 'FP-Tree construction, divide-and-conquer mining, Apriori vs FP-Growth'
+                    },
+                    {
+                        id: 'fp-association-rules',
+                        title: 'Mining Association Rules',
+                        slug: 'mining-association-rules',
+                        description: 'Rule generation from frequent itemsets, types of rules, and applications'
+                    }
+                ]
+            },
+            {
+                id: 'fds-unit-4',
+                title: 'Unit 4: Classification',
+                slug: 'classification',
+                topics: [
+                    {
+                        id: 'cls-basics',
+                        title: 'Basic Concepts & Issues',
+                        slug: 'basic-concepts-issues',
+                        description: 'What is classification, supervised learning, training/testing, overfitting'
+                    },
+                    {
+                        id: 'cls-decision-tree',
+                        title: 'Decision Tree Induction',
+                        slug: 'decision-tree-induction',
+                        description: 'Entropy, Information Gain, building decision trees step-by-step'
+                    },
+                    {
+                        id: 'cls-bayesian',
+                        title: 'Bayesian Classification',
+                        slug: 'bayesian-classification',
+                        description: 'Bayes Theorem, Naïve Bayes algorithm with worked example'
+                    },
+                    {
+                        id: 'cls-rule-based',
+                        title: 'Rule-Based Classification',
+                        slug: 'rule-based-classification',
+                        description: 'IF-THEN rules, coverage, accuracy, generating rules from trees'
+                    },
+                    {
+                        id: 'cls-knn',
+                        title: 'KNN & Lazy Learners',
+                        slug: 'knn-lazy-learners',
+                        description: 'K-Nearest Neighbor algorithm, distance measures, choosing K'
+                    },
+                    {
+                        id: 'cls-evaluation',
+                        title: 'Prediction, Accuracy, Precision & Recall',
+                        slug: 'prediction-accuracy-precision-recall',
+                        description: 'Confusion matrix, accuracy, precision, recall, F1-score with examples'
+                    }
+                ]
+            },
+            {
+                id: 'fds-unit-5',
+                title: 'Unit 5: Clustering',
+                slug: 'clustering',
+                topics: [
+                    {
+                        id: 'clu-analysis',
+                        title: 'Cluster Analysis',
+                        slug: 'cluster-analysis',
+                        description: 'What is clustering, clustering vs classification, types overview'
+                    },
+                    {
+                        id: 'clu-partitioning',
+                        title: 'Partitioning Methods (K-Means)',
+                        slug: 'partitioning-methods',
+                        description: 'K-Means algorithm step-by-step, Elbow method, K-Medoids'
+                    },
+                    {
+                        id: 'clu-hierarchical',
+                        title: 'Hierarchical Methods',
+                        slug: 'hierarchical-methods',
+                        description: 'Agglomerative, Divisive, Dendrograms, Linkage methods'
+                    },
+                    {
+                        id: 'clu-density',
+                        title: 'Density-Based Methods (DBSCAN)',
+                        slug: 'density-based-methods',
+                        description: 'DBSCAN algorithm, core/border/noise points, ε and MinPts'
+                    },
+                    {
+                        id: 'clu-grid',
+                        title: 'Grid-Based Methods',
+                        slug: 'grid-based-methods',
+                        description: 'STING, CLIQUE, WaveCluster, and complete method comparison'
+                    },
+                    {
+                        id: 'clu-evaluation',
+                        title: 'Clustering Evaluation',
+                        slug: 'clustering-evaluation',
+                        description: 'Silhouette coefficient, SSE, Dunn index, Purity with examples'
+                    }
+                ]
+            },
             {
                 id: 'fds-ia-prep',
                 title: 'IA Preparation',

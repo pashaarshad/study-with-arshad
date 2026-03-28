@@ -1,6 +1,6 @@
 // src/content/ai/introduction/ai-past-present-future.tsx
 import React from 'react';
-import { KeyPoints, InfoBox, ExampleBox, CodeBlock, ImagePlaceholder } from '@/components/ContentDisplay';
+import { KeyPoints, InfoBox, ExampleBox, CodeBlock, ContentImage } from '@/components/ContentDisplay';
 
 export default function AIPastPresentFuture() {
     return (
@@ -143,10 +143,10 @@ symptom(fatigue).
                 <li><strong>Large Language Models</strong> (2018-present) showed emergent capabilities</li>
             </ul>
 
-            <ImagePlaceholder
-                name="ai-evolution-diagram"
-                description="Three-column diagram showing evolution from Symbolic AI to Statistical ML to Deep Learning"
-                suggestedSize="900x450"
+            <ContentImage
+                src="/imgs/ai-evolution-diagram.svg"
+                alt="Three-column diagram showing evolution from Symbolic AI to Statistical ML to Deep Learning"
+                caption="The Evolution of AI Approaches (Symbolic → Statistical ML → Deep Learning)"
             />
 
             <h2 id="the-present">AI: The Present</h2>
@@ -316,10 +316,10 @@ print(answer)
                 </tbody>
             </table>
 
-            <ImagePlaceholder
-                name="ai-applications-2024"
-                description="Infographic showing current AI applications across industries: healthcare, finance, transportation, entertainment, education"
-                suggestedSize="900x600"
+            <ContentImage
+                src="/imgs/ai-applications-2024.svg"
+                alt="Infographic showing current AI applications across industries: healthcare, finance, transportation, entertainment, education"
+                caption="Current AI Applications Across Major Industries (2026)"
             />
 
             <h2 id="the-future">AI: The Future</h2>
@@ -418,10 +418,10 @@ print(answer)
                 questions in AI and philosophy.
             </p>
 
-            <ImagePlaceholder
-                name="ai-future-timeline"
-                description="Speculative timeline from 2024 to 2050+ showing potential AI milestones"
-                suggestedSize="1000x500"
+            <ContentImage
+                src="/imgs/ai-future-timeline.svg"
+                alt="Speculative timeline from 2024 to 2050+ showing potential AI milestones"
+                caption="Speculative Timeline of Future AI Milestones (Narrow AI → AGI → ASI)"
             />
 
             <h2 id="ethical-considerations">Ethical Considerations</h2>

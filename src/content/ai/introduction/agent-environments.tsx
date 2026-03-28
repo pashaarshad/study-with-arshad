@@ -1,6 +1,6 @@
 // src/content/ai/introduction/agent-environments.tsx
 import React from 'react';
-import { KeyPoints, InfoBox, ExampleBox, CodeBlock, ImagePlaceholder } from '@/components/ContentDisplay';
+import { KeyPoints, InfoBox, ExampleBox, CodeBlock, ContentImage } from '@/components/ContentDisplay';
 
 export default function AgentEnvironments() {
     return (
@@ -49,10 +49,10 @@ export default function AgentEnvironments() {
                 crucial for determining what kind of agent architecture is appropriate.
             </p>
 
-            <ImagePlaceholder
-                name="environment-properties-grid"
-                description="A grid showing 6 environment property dimensions with examples for each"
-                suggestedSize="900x600"
+            <ContentImage
+                src="/imgs/environment-properties-grid.svg"
+                alt="A grid showing 6 environment property dimensions with examples for each"
+                caption="The 6 Main Dimensions of AI Environments"
             />
 
             <h3 id="observable">1. Fully Observable vs Partially Observable</h3>
@@ -472,10 +472,10 @@ class SelfDrivingEnvironment:
                 </tbody>
             </table>
 
-            <ImagePlaceholder
-                name="environment-complexity-diagram"
-                description="A pyramid or ladder diagram showing environments from simple (bottom) to complex (top)"
-                suggestedSize="800x500"
+            <ContentImage
+                src="/imgs/environment-complexity-diagram.svg"
+                alt="A pyramid or ladder diagram showing environments from simple (bottom) to complex (top)"
+                caption="Environment Complexity Ladder"
             />
 
             <h2 id="real-world-analysis">Real-World Environment Analysis</h2>

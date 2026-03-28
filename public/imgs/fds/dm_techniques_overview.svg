@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+    <defs>
+        <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0F2027" />
+            <stop offset="50%" stop-color="#203A43" />
+            <stop offset="100%" stop-color="#2C5364" />
+        </linearGradient>
+        <filter id="shadow">
+            <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.25" />
+        </filter>
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <linearGradient id="center" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#F2C94C" />
+            <stop offset="100%" stop-color="#F2994A" />
+        </linearGradient>
+    </defs>
+
+    <!-- Background -->
+    <rect width="900" height="500" rx="16" fill="url(#bg)" />
+
+    <!-- Group: Central Node -->
+    <g transform="translate(450, 250)">
+        
+        <!-- Connecting lines -->
+        <!-- Top Left: Classification -->
+        <path d="M-60 -30 Q -150 -100 -250 -120" fill="none" stroke="#FF6B6B" stroke-width="4" stroke-dasharray="8 4" opacity="0.8" />
+        <!-- Mid Left: Clustering -->
+        <path d="M-80 0 L -250 0" fill="none" stroke="#48DBFB" stroke-width="4" stroke-dasharray="8 4" opacity="0.8" />
+        <!-- Bottom Left: Association -->
+        <path d="M-60 30 Q -150 100 -250 120" fill="none" stroke="#1DD1A1" stroke-width="4" stroke-dasharray="8 4" opacity="0.8" />
+        <!-- Top Right: Regression -->
+        <path d="M60 -30 Q 150 -100 250 -120" fill="none" stroke="#FF9FF3" stroke-width="4" stroke-dasharray="8 4" opacity="0.8" />
+        <!-- Mid Right: Anomaly -->
+        <path d="M80 0 L 250 0" fill="none" stroke="#FECA57" stroke-width="4" stroke-dasharray="8 4" opacity="0.8" />
+        <!-- Bottom Right: Prediction -->
+        <path d="M60 30 Q 150 100 250 120" fill="none" stroke="#5F27CD" stroke-width="4" stroke-dasharray="8 4" opacity="0.8" />
+
+        <!-- Central Circle -->
+        <circle cx="0" cy="0" r="80" fill="url(#center)" filter="url(#shadow)" />
+        <circle cx="0" cy="0" r="70" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2" />
+        <text x="0" y="-10" font-family="'Inter', sans-serif" font-size="22" font-weight="800" fill="#2d3436" text-anchor="middle">DATA</text>
+        <text x="0" y="15" font-family="'Inter', sans-serif" font-size="22" font-weight="800" fill="#2d3436" text-anchor="middle">MINING</text>
+        <text x="0" y="40" font-family="'Inter', sans-serif" font-size="14" font-weight="600" fill="rgba(0,0,0,0.6)" text-anchor="middle">TECHNIQUES</text>
+
+        <!-- Node 1: Classification (Top Left) -->
+        <g transform="translate(-250, -120)" filter="url(#shadow)">
+            <rect x="-110" y="-40" width="220" height="80" rx="10" fill="rgba(255, 107, 107, 0.15)" stroke="#FF6B6B" stroke-width="2" />
+            <circle cx="-75" cy="0" r="22" fill="#FF6B6B" opacity="0.8" />
+            <text x="-75" y="6" font-size="20" text-anchor="middle">🗂️</text>
+            <text x="-40" y="-5" font-family="'Inter', sans-serif" font-size="16" font-weight="700" fill="#ffffff">Classification</text>
+            <text x="-40" y="15" font-family="'Inter', sans-serif" font-size="12" font-weight="400" fill="rgba(255,255,255,0.7)">Spam or Not Spam</text>
+        </g>
+
+        <!-- Node 2: Clustering (Mid Left) -->
+        <g transform="translate(-250, 0)" filter="url(#shadow)">
+            <rect x="-110" y="-40" width="220" height="80" rx="10" fill="rgba(72, 219, 251, 0.15)" stroke="#48DBFB" stroke-width="2" />
+            <circle cx="-75" cy="0" r="22" fill="#48DBFB" opacity="0.8" />
+            <text x="-75" y="6" font-size="20" text-anchor="middle">🎯</text>
+            <text x="-40" y="-5" font-family="'Inter', sans-serif" font-size="16" font-weight="700" fill="#ffffff">Clustering</text>
+            <text x="-40" y="15" font-family="'Inter', sans-serif" font-size="12" font-weight="400" fill="rgba(255,255,255,0.7)">Customer Segments</text>
+        </g>
+
+        <!-- Node 3: Association Rules (Bottom Left) -->
+        <g transform="translate(-250, 120)" filter="url(#shadow)">
+            <rect x="-110" y="-40" width="220" height="80" rx="10" fill="rgba(29, 209, 161, 0.15)" stroke="#1DD1A1" stroke-width="2" />
+            <circle cx="-75" cy="0" r="22" fill="#1DD1A1" opacity="0.8" />
+            <text x="-75" y="6" font-size="20" text-anchor="middle">🛒</text>
+            <text x="-40" y="-5" font-family="'Inter', sans-serif" font-size="16" font-weight="700" fill="#ffffff">Association Rules</text>
+            <text x="-40" y="15" font-family="'Inter', sans-serif" font-size="12" font-weight="400" fill="rgba(255,255,255,0.7)">Bread &amp; Butter</text>
+        </g>
+
+        <!-- Node 4: Regression (Top Right) -->
+        <g transform="translate(250, -120)" filter="url(#shadow)">
+            <rect x="-110" y="-40" width="220" height="80" rx="10" fill="rgba(255, 159, 243, 0.15)" stroke="#FF9FF3" stroke-width="2" />
+            <circle cx="-75" cy="0" r="22" fill="#FF9FF3" opacity="0.8" />
+            <text x="-75" y="6" font-size="20" text-anchor="middle">📈</text>
+            <text x="-40" y="-5" font-family="'Inter', sans-serif" font-size="16" font-weight="700" fill="#ffffff">Regression</text>
+            <text x="-40" y="15" font-family="'Inter', sans-serif" font-size="12" font-weight="400" fill="rgba(255,255,255,0.7)">Stock Price ($)</text>
+        </g>
+
+        <!-- Node 5: Anomaly Detection (Mid Right) -->
+        <g transform="translate(250, 0)" filter="url(#shadow)">
+            <rect x="-110" y="-40" width="220" height="80" rx="10" fill="rgba(254, 202, 87, 0.15)" stroke="#FECA57" stroke-width="2" />
+            <circle cx="-75" cy="0" r="22" fill="#FECA57" opacity="0.8" />
+            <text x="-75" y="6" font-size="20" text-anchor="middle">🚨</text>
+            <text x="-40" y="-5" font-family="'Inter', sans-serif" font-size="16" font-weight="700" fill="#ffffff">Anomaly Detection</text>
+            <text x="-40" y="15" font-family="'Inter', sans-serif" font-size="12" font-weight="400" fill="rgba(255,255,255,0.7)">Credit Card Fraud</text>
+        </g>
+
+        <!-- Node 6: Prediction (Bottom Right) -->
+        <g transform="translate(250, 120)" filter="url(#shadow)">
+            <rect x="-110" y="-40" width="220" height="80" rx="10" fill="rgba(95, 39, 205, 0.15)" stroke="#5F27CD" stroke-width="2" />
+            <circle cx="-75" cy="0" r="22" fill="#5F27CD" opacity="0.8" />
+            <text x="-75" y="6" font-size="20" text-anchor="middle">🔮</text>
+            <text x="-40" y="-5" font-family="'Inter', sans-serif" font-size="16" font-weight="700" fill="#ffffff">Prediction</text>
+            <text x="-40" y="15" font-family="'Inter', sans-serif" font-size="12" font-weight="400" fill="rgba(255,255,255,0.7)">Weather Forecasting</text>
+        </g>
+    </g>
+</svg>
