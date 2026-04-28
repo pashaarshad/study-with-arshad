@@ -32,6 +32,41 @@ export const subjectPdfs: SubjectPdfs[] = [
                 path: '/6-sem-Subjets/AI-notes/UNIT-2 AI notes.pdf',
                 size: '299 KB',
                 unit: 'Unit 2'
+            },
+            {
+                title: 'Unit 3 - Knowledge Representation',
+                fileName: 'UNIT -3 knowledge representation .pdf',
+                path: '/6-sem-Subjets/AI-notes/UNIT -3 knowledge representation .pdf',
+                size: '560 KB',
+                unit: 'Unit 3'
+            },
+            {
+                title: 'Unit 4 - Learning',
+                fileName: 'UNIT 4 Learning.pdf',
+                path: '/6-sem-Subjets/AI-notes/UNIT 4 Learning.pdf',
+                size: '815 KB',
+                unit: 'Unit 4'
+            },
+            {
+                title: 'Unit 5 - Applications of AI',
+                fileName: 'UNIT 5 application AI.pdf',
+                path: '/6-sem-Subjets/AI-notes/UNIT 5 application AI.pdf',
+                size: '558 KB',
+                unit: 'Unit 5'
+            },
+            {
+                title: 'Unit 5 - Mining Frequent Patterns',
+                fileName: 'unit-5 Mining frequent patterns.pdf',
+                path: '/6-sem-Subjets/AI-notes/unit-5 Mining frequent patterns.pdf',
+                size: '299 KB',
+                unit: 'Unit 5'
+            },
+            {
+                title: 'AI Question Paper (June 2025)',
+                fileName: 'bca-6-sem-computer-application-artificial-intelligence-and-app-mp-295-jun-2025.pdf',
+                path: '/6-sem-Subjets/AI-notes/bca-6-sem-computer-application-artificial-intelligence-and-app-mp-295-jun-2025.pdf',
+                size: '70 KB',
+                unit: 'Question Paper'
             }
         ]
     },
@@ -44,6 +79,34 @@ export const subjectPdfs: SubjectPdfs[] = [
                 path: '/6-sem-Subjets/FDS/FDS Unit 1.pdf',
                 size: '323 KB',
                 unit: 'Unit 1'
+            },
+            {
+                title: 'Unit 2 - Data Science',
+                fileName: 'Unit 2_Data Science_260219_120921.pdf',
+                path: '/6-sem-Subjets/FDS/Unit 2_Data Science_260219_120921.pdf',
+                size: '1.06 MB',
+                unit: 'Unit 2'
+            },
+            {
+                title: 'Unit 3 - Data Science',
+                fileName: 'Unit 3 Data Science_260309_221103.pdf',
+                path: '/6-sem-Subjets/FDS/Unit 3 Data Science_260309_221103.pdf',
+                size: '711 KB',
+                unit: 'Unit 3'
+            },
+            {
+                title: 'Unit 4 - Data Science',
+                fileName: 'FDS Unit 4.pdf',
+                path: '/6-sem-Subjets/FDS/FDS Unit 4.pdf',
+                size: '1.09 MB',
+                unit: 'Unit 4'
+            },
+            {
+                title: 'Unit 5 - Data Science',
+                fileName: 'FDS Unit 5.pdf',
+                path: '/6-sem-Subjets/FDS/FDS Unit 5.pdf',
+                size: '1.11 MB',
+                unit: 'Unit 5'
             }
         ]
     },
@@ -52,24 +115,94 @@ export const subjectPdfs: SubjectPdfs[] = [
         notes: [
             {
                 title: 'Unit 1 - PHP Notes (New)',
-                fileName: 'php notes u1 new.pdf',
-                path: '/6-sem-Subjets/PHP/php notes u1 new.pdf',
+                fileName: '1 php notes u1 new.pdf',
+                path: '/6-sem-Subjets/PHP/php_notes/1 php notes u1 new.pdf',
                 size: '801 KB',
                 unit: 'Unit 1'
             },
             {
-                title: 'Unit 1 - PHP Programming',
-                fileName: 'php u1.pdf',
-                path: '/6-sem-Subjets/PHP/php u1.pdf',
+                title: 'Unit 1 - PHP Programming (Done)',
+                fileName: '1 php u1 --Done.pdf',
+                path: '/6-sem-Subjets/PHP/php_notes/1 php u1 --Done.pdf',
                 size: '1007 KB',
                 unit: 'Unit 1'
             },
             {
-                title: 'Unit 2 - PHP Programming',
-                fileName: 'php u2.pdf',
-                path: '/6-sem-Subjets/PHP/php u2.pdf',
+                title: 'Unit 1 - PHP Unit 1 Notes (Set 1)',
+                fileName: '1 PHP unit 1 notes(notes 1).pdf',
+                path: '/6-sem-Subjets/PHP/php_notes/1 PHP unit 1 notes(notes 1).pdf',
+                size: '10.8 MB',
+                unit: 'Unit 1'
+            },
+            {
+                title: 'Unit 1 - PHP Unit 1 (Set 2)',
+                fileName: '1 UNIT-1PHP(notes 2).pdf',
+                path: '/6-sem-Subjets/PHP/php_notes/1 UNIT-1PHP(notes 2).pdf',
+                size: '11.1 MB',
+                unit: 'Unit 1'
+            },
+            {
+                title: 'Unit 2 - PHP Programming (Done)',
+                fileName: '2 php u2 --Done.pdf',
+                path: '/6-sem-Subjets/PHP/php_notes/2 php u2 --Done.pdf',
                 size: '576 KB',
                 unit: 'Unit 2'
+            },
+            {
+                title: 'Unit 2 - PHP Unit 2 Notes (Set 1)',
+                fileName: '2  PHP unit 2 notes(notes 1).pdf',
+                path: '/6-sem-Subjets/PHP/php_notes/2  PHP unit 2 notes(notes 1).pdf',
+                size: '13 MB',
+                unit: 'Unit 2'
+            },
+            {
+                title: 'Unit 2 - PHP Unit 2 (Set 2)',
+                fileName: '2 PHP UNIT -2 (notes 2).pdf',
+                path: '/6-sem-Subjets/PHP/php_notes/2 PHP UNIT -2 (notes 2).pdf',
+                size: '6.4 MB',
+                unit: 'Unit 2'
+            },
+            {
+                title: 'Unit 3 - PHP & MySQL (Set 1 - Done)',
+                fileName: '3 PHP and MySQL UNIT 3 (notes 1) ---Done.pdf',
+                path: '/6-sem-Subjets/PHP/php_notes/3 PHP and MySQL UNIT 3 (notes 1) ---Done.pdf',
+                size: '10 MB',
+                unit: 'Unit 3'
+            },
+            {
+                title: 'Unit 3 - PHP & MySQL (Set 2)',
+                fileName: '3 PHP & MySQL UNIT -3 (notes 2).pdf',
+                path: '/6-sem-Subjets/PHP/php_notes/3 PHP & MySQL UNIT -3 (notes 2).pdf',
+                size: '4.8 MB',
+                unit: 'Unit 3'
+            },
+            {
+                title: 'Unit 4 - PHP & MySQL (Set 1)',
+                fileName: '4 PHP and MySQL UNIT 4(notes 1).pdf',
+                path: '/6-sem-Subjets/PHP/php_notes/4 PHP and MySQL UNIT 4(notes 1).pdf',
+                size: '15.7 MB',
+                unit: 'Unit 4'
+            },
+            {
+                title: 'Unit 4 - PHP & MySQL (Set 2)',
+                fileName: '4 PHP and MySQL UNIT -4 (notes 2).pdf',
+                path: '/6-sem-Subjets/PHP/php_notes/4 PHP and MySQL UNIT -4 (notes 2).pdf',
+                size: '8.6 MB',
+                unit: 'Unit 4'
+            },
+            {
+                title: 'Unit 5 - PHP & MySQL (Set 1)',
+                fileName: '5 PHP and MySQL UNIT 5 (notes 1).pdf',
+                path: '/6-sem-Subjets/PHP/php_notes/5 PHP and MySQL UNIT 5 (notes 1).pdf',
+                size: '7.2 MB',
+                unit: 'Unit 5'
+            },
+            {
+                title: 'Unit 5 - PHP & MySQL (Set 2)',
+                fileName: '5 PHP and MySQL Unit-5 (notes 2).pdf',
+                path: '/6-sem-Subjets/PHP/php_notes/5 PHP and MySQL Unit-5 (notes 2).pdf',
+                size: '6.1 MB',
+                unit: 'Unit 5'
             },
             {
                 title: 'PHP Lab Programs',
@@ -79,10 +212,45 @@ export const subjectPdfs: SubjectPdfs[] = [
                 unit: 'Lab'
             },
             {
+                title: 'PHP Programs (11-17)',
+                fileName: 'Today_PHP_Programs(11-17) (3).pdf',
+                path: '/6-sem-Subjets/PHP/Today_PHP_Programs(11-17) (3).pdf',
+                size: '130 KB',
+                unit: 'Lab'
+            },
+            {
+                title: 'PHP Programs (18-21)',
+                fileName: 'PHP_Programs(18-21).pdf',
+                path: '/6-sem-Subjets/PHP/PHP_Programs(18-21).pdf',
+                size: '64 KB',
+                unit: 'Lab'
+            },
+            {
+                title: 'PHP & MySQL Assignment',
+                fileName: 'VIA_PHP_MySQL_Assignment.pdf',
+                path: '/6-sem-Subjets/PHP/VIA_PHP_MySQL_Assignment.pdf',
+                size: '63 KB',
+                unit: 'Assignment'
+            },
+            {
                 title: 'Unit 1 - Questions',
                 fileName: 'Unit-1 Qustion.pdf',
                 path: '/6-sem-Subjets/PHP/Unit-1 Qustion.pdf',
                 size: '55 KB',
+                unit: 'Question Paper'
+            },
+            {
+                title: 'PHP & MySQL Question Paper (June 2025)',
+                fileName: 'bca-6-sem-computer-application-php-and-mysql-mp-296-jun-2025.pdf',
+                path: '/6-sem-Subjets/PHP/bca-6-sem-computer-application-php-and-mysql-mp-296-jun-2025.pdf',
+                size: '72 KB',
+                unit: 'Question Paper'
+            },
+            {
+                title: 'PHP Question Paper (2025)',
+                fileName: 'Qustion_paper_2025.pdf',
+                path: '/6-sem-Subjets/PHP/php_notes/Qustion_paper_2025.pdf',
+                size: '72 KB',
                 unit: 'Question Paper'
             }
         ]
@@ -103,6 +271,27 @@ export const subjectPdfs: SubjectPdfs[] = [
                 path: '/6-sem-Subjets/WC/WCMS unit2.pdf',
                 size: '397 KB',
                 unit: 'Unit 2'
+            },
+            {
+                title: 'Unit 3 - WCMS',
+                fileName: 'wcms Unit3.pdf',
+                path: '/6-sem-Subjets/WC/wcms Unit3.pdf',
+                size: '537 KB',
+                unit: 'Unit 3'
+            },
+            {
+                title: 'Unit 4 - WCMS',
+                fileName: 'wcms unit4.pdf',
+                path: '/6-sem-Subjets/WC/wcms unit4.pdf',
+                size: '649 KB',
+                unit: 'Unit 4'
+            },
+            {
+                title: 'Unit 5 - WCMS',
+                fileName: 'wcms unit5.pdf',
+                path: '/6-sem-Subjets/WC/wcms unit5.pdf',
+                size: '1.1 MB',
+                unit: 'Unit 5'
             }
         ]
     }
