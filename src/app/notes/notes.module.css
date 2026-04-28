@@ -30,6 +30,35 @@
     line-height: 1.6;
 }
 
+/* Stats Row */
+.statsRow {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 1.5rem;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.statNumber {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--link-color);
+}
+
+.statLabel {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
 /* Subjects Grid */
 .subjectsGrid {
     display: grid;
@@ -83,18 +112,60 @@
 /* Notes List */
 .notesList {
     padding: 0.5rem 0;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+/* Unit Group */
+.unitGroup {
+    margin-bottom: 0.25rem;
+}
+
+.unitGroupHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.5rem;
+    background-color: var(--bg-tertiary);
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.unitGroupIcon {
+    font-size: 0.9rem;
+}
+
+.unitGroupTitle {
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--text-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.unitGroupCount {
+    margin-left: auto;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    background-color: var(--bg-hover);
+    padding: 0.1rem 0.5rem;
+    border-radius: 10px;
+    font-weight: 600;
 }
 
 .noteItem {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    padding: 0.875rem 1.5rem;
+    padding: 0.75rem 1.5rem 0.75rem 2.25rem;
     text-decoration: none;
     color: var(--text-primary);
     transition: background-color 0.15s ease;
     cursor: pointer;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-light);
 }
 
 .noteItem:last-child {
@@ -107,7 +178,7 @@
 }
 
 .noteIcon {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     flex-shrink: 0;
 }
 
@@ -119,9 +190,12 @@
 .noteTitle {
     display: block;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--text-primary);
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .noteMeta {
@@ -132,23 +206,24 @@
 
 .unitBadge {
     display: inline-block;
-    padding: 0.125rem 0.5rem;
+    padding: 0.1rem 0.4rem;
     background-color: var(--link-color);
     color: white;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     font-weight: 600;
     border-radius: 4px;
 }
 
 .noteSize {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--text-muted);
 }
 
 .downloadIcon {
-    font-size: 1rem;
-    opacity: 0.5;
+    font-size: 0.9rem;
+    opacity: 0.4;
     transition: opacity 0.2s ease, transform 0.2s ease;
+    flex-shrink: 0;
 }
 
 .noteItem:hover .downloadIcon {
@@ -158,11 +233,23 @@
 
 /* Card Footer */
 .cardFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 0.75rem 1.5rem;
     border-top: 1px solid var(--border-color);
     font-size: 0.75rem;
     color: var(--text-muted);
     background-color: var(--bg-tertiary);
+}
+
+.footerUnits {
+    background-color: var(--link-color);
+    color: white;
+    padding: 0.15rem 0.6rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.7rem;
 }
 
 /* Syllabus Section */
@@ -188,6 +275,7 @@
     text-decoration: none;
     color: var(--text-primary);
     transition: all 0.2s ease;
+    margin-bottom: 0.75rem;
 }
 
 .syllabusLink:hover {
@@ -226,6 +314,7 @@
     font-weight: 600;
     font-size: 0.85rem;
     transition: opacity 0.2s ease;
+    white-space: nowrap;
 }
 
 .syllabusLink:hover .downloadBtn {
@@ -242,6 +331,14 @@
         grid-template-columns: 1fr;
     }
 
+    .statsRow {
+        gap: 1.5rem;
+    }
+
+    .statNumber {
+        font-size: 1.4rem;
+    }
+
     .syllabusLink {
         flex-wrap: wrap;
     }
@@ -249,5 +346,9 @@
     .downloadBtn {
         width: 100%;
         text-align: center;
+    }
+
+    .noteTitle {
+        white-space: normal;
     }
 }
