@@ -55,18 +55,25 @@ export const subjectPdfs: SubjectPdfs[] = [
                 unit: 'Unit 5'
             },
             {
-                title: 'Unit 5 - Mining Frequent Patterns',
-                fileName: 'unit-5 Mining frequent patterns.pdf',
-                path: '/6-sem-Subjets/AI-notes/unit-5 Mining frequent patterns.pdf',
-                size: '299 KB',
-                unit: 'Unit 5'
-            },
-            {
                 title: 'AI Question Paper (June 2025)',
                 fileName: 'bca-6-sem-computer-application-artificial-intelligence-and-app-mp-295-jun-2025.pdf',
                 path: '/6-sem-Subjets/AI-notes/bca-6-sem-computer-application-artificial-intelligence-and-app-mp-295-jun-2025.pdf',
                 size: '70 KB',
                 unit: 'Question Paper'
+            },
+            {
+                title: 'AI Question Paper (2024)',
+                fileName: '2024 - ARTIFICIAL INTERLLIGENCE & APPLICATIONS108.pdf',
+                path: '/6-sem-Subjets/AI-notes/2024 - ARTIFICIAL INTERLLIGENCE & APPLICATIONS108.pdf',
+                size: '36 KB',
+                unit: 'Question Paper'
+            },
+            {
+                title: 'AI Syllabus',
+                fileName: 'all-s.png',
+                path: '/6-sem-Subjets/AI-notes/all-s.png',
+                size: '118 KB',
+                unit: 'Syllabus / Notes'
             }
         ]
     },
@@ -106,6 +113,13 @@ export const subjectPdfs: SubjectPdfs[] = [
                 fileName: 'FDS Unit 5.pdf',
                 path: '/6-sem-Subjets/FDS/FDS Unit 5.pdf',
                 size: '1.11 MB',
+                unit: 'Unit 5'
+            },
+            {
+                title: 'Unit 5 - Mining Frequent Patterns',
+                fileName: 'unit-5 Mining frequent patterns.pdf',
+                path: '/6-sem-Subjets/FDS/unit-5 Mining frequent patterns.pdf',
+                size: '299 KB',
                 unit: 'Unit 5'
             }
         ]
